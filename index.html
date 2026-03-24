@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="order-summary-section">
+      <div class="order-summary-menu">
+        <img
+          src="assets/images/cart-icon.png"
+          alt="cart-icon"
+          class="cart-icon"
+        />
+        <p>Order Summary</p>
+        <img
+          src="assets/images/chevronUpDown.png"
+          alt="chevronUpDown"
+          class="chevron-up-down-icon"
+        />
+      </div>
+      <div class="order-summary-total">
+        <p class="discounted-price">$28.99</p>
+        <p class="original-price">$48.00</p>
+      </div>
+    </header>
+    <main class="main-container">
+      <section class="logo-section">
+        <img
+          src="assets/images/twinkling-tree-logo.png"
+          alt="twinkling-tree-logo"
+          class="twinkling-tree-logo"
+        />
+        <div class="express-checkout-section">
+          <p class="express-checkout-title">Express Checkout</p>
+          <a class="payment-link-btn">
+            <img
+              src="assets/images/paypal.png"
+              alt="paypal-logo"
+              class="payment-icon"
+            />
+          </a>
+          <a class="payment-link-btn">
+            <img
+              src="assets/images/apple-pay.png"
+              alt="amazon-logo"
+              class="payment-icon"
+            />
+          </a>
+          <p class="express-checkout-or">Or</p>
+          <p class="express-checkout-cc">
+            Continue below to pay with a credit card
+          </p>
+        </div>
+      </section>
+      <section class="contact-info-section">
+        <p class="section-titles">Contact Information</p>
+        <div class="field">
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            autocomplete="email"
+            placeholder="Email*"
+            aria-required="true"
+            aria-describedby="contact-email-helper"
+            required
+          />
+          <p id="contact-email-helper" class="input-helper">
+            Email is required
+          </p>
+        </div>
+      </section>
+      <section class="shipping-address-section">
+        <p class="section-titles">Shipping Address</p>
+
+        <div class="shipping-address-fields">
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-first-name"
+              name="shipping-first-name"
+              placeholder="First Name*"
+              aria-required="true"
+              aria-describedby="shipping-first-name-helper"
+              required
+            />
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-last-name"
+              name="shipping-last-name"
+              placeholder="Last Name*"
+              aria-required="true"
+              aria-describedby="shipping-last-name-helper"
+              required
+            />
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-address"
+              name="shipping-address"
+              placeholder="Address*"
+              aria-required="true"
+              aria-describedby="shipping-last-name-helper"
+              required
+            />
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-apt-suite"
+              name="shipping-apt-suite"
+              placeholder="Apt, suite, etc. (optional)"
+              aria-required="true"
+              aria-describedby="shipping-apt-suite-helper"
+            />
+          </div>
+          <div class="field">
+            <div class="select-combo" data-custom-select>
+              <button
+                type="button"
+                class="select-combo__trigger"
+                id="shipping-country-trigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="shipping-country-listbox"
+                aria-labelledby="shipping-country-label shipping-country-value"
+              >
+                <span class="select-combo__main">
+                  <span id="shipping-country-label" class="select-combo__label"
+                    >Country</span
+                  >
+                  <span
+                    id="shipping-country-value"
+                    class="select-combo__value"
+                    data-select-display
+                    >United States</span
+                  >
+                </span>
+                <span class="select-combo__suffix">
+                  <span class="select-combo__divider" aria-hidden="true"></span>
+                  <svg
+                    class="icon-chevron-down select-combo__chevron"
+                    width="16"
+                    height="8"
+                    viewBox="0 0 10 5"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polygon points="0,0 10,0 5,5" fill="#888888" />
+                  </svg>
+                </span>
+              </button>
+              <div class="select-combo__dropdown" data-select-dropdown>
+                <ul
+                  class="select-combo__list"
+                  role="listbox"
+                  id="shipping-country-listbox"
+                  tabindex="-1"
+                ></ul>
+              </div>
+              <select
+                id="shipping-country"
+                name="shipping-country"
+                class="select-combo__native-sr"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <option value="" selected disabled>Select country*</option>
+                <option value="united-states">United States</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <input
+              type=""
+              id="shipping-zip-code"
+              name="shipping-zip-code"
+              placeholder="Zip Code*"
+              aria-required="true"
+              aria-describedby="shipping-zip-code-helper"
+            />
+          </div>
+          <div class="field">
+            <div class="select-combo" data-custom-select>
+              <button
+                type="button"
+                class="select-combo__trigger"
+                id="shipping-state-trigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="shipping-state-listbox"
+                aria-labelledby="shipping-state-label shipping-state-value"
+              >
+                <span class="select-combo__main">
+                  <span id="shipping-state-label" class="select-combo__label"
+                    >State</span
+                  >
+                  <span
+                    id="shipping-state-value"
+                    class="select-combo__value"
+                    data-select-display
+                    >Select state*</span
+                  >
+                </span>
+                <span class="select-combo__suffix">
+                  <span class="select-combo__divider" aria-hidden="true"></span>
+                  <svg
+                    class="icon-chevron-down select-combo__chevron"
+                    width="16"
+                    height="8"
+                    viewBox="0 0 10 5"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polygon points="0,0 10,0 5,5" fill="#888888" />
+                  </svg>
+                </span>
+              </button>
+              <div class="select-combo__dropdown" data-select-dropdown>
+                <ul
+                  class="select-combo__list"
+                  role="listbox"
+                  id="shipping-state-listbox"
+                  tabindex="-1"
+                ></ul>
+              </div>
+              <select
+                id="shipping-state"
+                name="shipping-state"
+                class="select-combo__native-sr"
+                tabindex="-1"
+                aria-hidden="true"
+                aria-required="true"
+                required
+              >
+                <option value="" selected disabled>Select state*</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-city"
+              name="shipping-city"
+              placeholder="City*"
+              aria-required="true"
+              aria-describedby="shipping-city-helper"
+            />
+          </div>
+          <div class="field">
+            <input
+              type="tel"
+              id="shipping-phone-number"
+              name="shipping-phone-number"
+              placeholder="Phone Number*"
+              aria-required="true"
+              aria-describedby="shipping-phone-number-helper"
+            />
+          </div>
+        </div>
+        <section class="billing-address-section">
+          <p class="section-titles">Billing Address</p>
+          <div
+            class="billing-address-fields radio-group"
+            role="radiogroup"
+            aria-label="Billing address options"
+          >
+            <div class="radio-group__option">
+              <input
+                type="radio"
+                name="billing-address"
+                id="billing-address-same-as-shipping"
+                value="same"
+                checked
+              />
+              <label for="billing-address-same-as-shipping"
+                >Same as shipping address</label
+              >
+            </div>
+            <div class="radio-group__option">
+              <input
+                type="radio"
+                name="billing-address"
+                id="billing-address-different"
+                value="different"
+              />
+              <label for="billing-address-different"
+                >Use a different billing address</label
+              >
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="shipping-method-section">
+        <p class="section-titles">Shipping Method</p>
+        <div class="shipping-method-fields radio-group">
+          <div class="radio-group__option">
+            <input
+              type="radio"
+              name="shipping-method"
+              id="shipping-method-standard"
+              value="standard"
+              checked
+            />
+            <label for="shipping-method-standard" class="shipping-option-group">
+              <span class="shipping-option-details">
+                <span class="shipping-method-label"
+                  >Ground shipping: 2-7 Business Days</span
+                >
+                <span class="shipping-method-price">$19.95</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="discount-code-section">
+        <p class="section-titles">Discount Code</p>
+        <div class="discount-code-fields">
+          <input
+            type="text"
+            placeholder="Discount code"
+            id="discount-code"
+            name="discount-code"
+          />
+          <button
+            type="button"
+            id="apply-discount-code"
+            name="apply-discount-code"
+            class="btn-primary"
+          >
+            Apply
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- <footer>
+      <p>footer here</p>
+    </footer> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

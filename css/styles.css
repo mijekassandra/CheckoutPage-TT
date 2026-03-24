@@ -1,0 +1,740 @@
+/* FONT SECTION ----------------------------------- */
+
+@font-face {
+  font-family: "Avenir LT Pro Light";
+  src: url("../assets/font/AvenirLTProLight.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Light";
+  src: url("../assets/font/AvenirLTProLightOblique.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Book";
+  src: url("../assets/font/AvenirLTProBook.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Book";
+  src: url("../assets/font/AvenirLTProBookOblique.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Roman";
+  src: url("../assets/font/AvenirLTProRoman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Roman";
+  src: url("../assets/font/AvenirLTProOblique.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Medium";
+  src: url("../assets/font/AvenirLTProMedium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Medium";
+  src: url("../assets/font/AvenirLTProMediumOblique.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Heavy";
+  src: url("../assets/font/AvenirLTProHeavy.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Heavy";
+  src: url("../assets/font/AvenirLTProHeavyOblique.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Black";
+  src: url("../assets/font/AvenirLTProBlack.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Pro Black";
+  src: url("../assets/font/AvenirLTProBlackOblique.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* MAIN ELEMENTS SECTION ----------------------------------------------*/
+
+:root {
+  --font-primary: "Avenir LT Pro Roman";
+
+  --color-white: #ffffff;
+  --color-black: #292929;
+  --color-grey: #f7f7f7;
+  --color-grey-selected: #d8d7d7;
+  --color-grey-placeholder: #737373;
+  --color-dark-grey: #808080;
+  --color-text-grey: #9e9e9e; /* color for when original price is discount */
+  --color-yellow: #ffc439;
+  --color-green: #00b67a;
+  --color-light-green: #5dac63;
+  --color-blue: #0a609b;
+
+  --color-red-error: #b73636;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary), sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Avenir LT Pro Roman", sans-serif;
+  color: var(--color-black);
+  letter-spacing: 0.35px;
+}
+
+input {
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--color-dark-grey);
+  min-height: 48px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "Avenir LT Pro Roman", sans-serif;
+}
+
+/* GLOBAL STYLES SECTION ----------------------------------------------*/
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 100%;
+  padding: 24px 14px;
+}
+
+.section-titles {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.btn-primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 12px 30pxpx;
+  cursor: pointer;
+
+  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  min-height: 40px;
+}
+
+/* FORM FIELDS STYLES SECTION ----------------------------------------------*/
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.input-helper {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 24px;
+  color: var(--color-red-error);
+}
+
+.input-helper--error {
+  color: var(--color-red-error);
+}
+
+/* DROPDOWN CUSTOM SELECT STYLES SECTION ----------------------------------------------*/
+
+.select-combo {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.select-combo--open {
+  z-index: 30;
+}
+
+.select-combo__trigger {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 48px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.select-combo__trigger:hover {
+  border-color: #a8a8a8;
+}
+
+.select-combo__trigger:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+.select-combo--open .select-combo__trigger {
+  border-color: var(--color-black);
+}
+
+.select-combo__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding: 8px 8px 8px 14px;
+  min-width: 0;
+}
+
+.select-combo__label {
+  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-size: 11px;
+  line-height: 1.25;
+  letter-spacing: 0.25px;
+  color: var(--color-grey-placeholder);
+}
+
+.select-combo__value {
+  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  letter-spacing: 0.35px;
+  color: var(--color-black);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.select-combo__suffix {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 12px 0 0;
+  gap: 10px;
+}
+
+.select-combo__divider {
+  width: 1px;
+  height: 22px;
+  background-color: #b3b3b367;
+  align-self: center;
+}
+
+.select-combo__chevron {
+  width: 10px;
+  height: 10px;
+  display: block;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.select-combo--open .select-combo__chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.select-combo__dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  padding-top: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s linear 0.18s;
+}
+
+.select-combo--open .select-combo__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0s;
+}
+
+.select-combo__list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: 240px;
+  overflow-y: auto;
+  background-color: var(--color-white);
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(41, 41, 41, 0.12);
+  scroll-behavior: smooth;
+}
+
+.select-combo__list:focus {
+  outline: none;
+}
+
+.select-combo__option {
+  margin: 0;
+  padding: 11px 12px 11px 14px;
+  border-radius: 6px;
+  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  letter-spacing: 0.35px;
+  color: var(--color-black);
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+
+.select-combo__option:hover {
+  background-color: var(--color-grey);
+}
+
+.select-combo__option--active {
+  background-color: #eeeeee;
+}
+
+.select-combo__option--selected {
+  font-family: "Avenir LT Pro Medium", sans-serif;
+  background-color: var(--color-grey-selected);
+  color: var(--color-black);
+}
+
+.select-combo__option--selected.select-combo__option--active {
+  background-color: var(--color-grey-selected);
+}
+
+.select-combo__native-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+}
+
+/* RADIO GROUP STYLES SECTION ----------------------------------------------*/
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.radio-group .radio-group__option {
+  position: relative;
+}
+
+.radio-group .radio-group__option input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  border-radius: 0;
+  min-height: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.radio-group .radio-group__option label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.35px;
+  color: var(--color-black);
+}
+
+.radio-group .radio-group__option label::before {
+  content: "";
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text-grey);
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.radio-group .radio-group__option input[type="radio"]:checked + label::before {
+  border-color: var(--color-black);
+  background-color: var(--color-black);
+  border: 4px solid var(--color-black);
+  background-image: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 28%,
+    transparent 29%
+  );
+}
+
+.radio-group__option input[type="radio"]:focus-visible + label {
+  outline: 4px solid var(--color-black);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ORDER SUMMARY STYLES SECTION ----------------------------------------------*/
+.order-summary-section {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--color-grey);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+}
+
+.order-summary-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-summary-menu p {
+  font-size: 13px;
+  color: var(--color-blue);
+  line-height: 22px;
+}
+
+.cart-icon {
+  width: 24px;
+  height: min-content;
+}
+
+.chevron-up-down-icon {
+  width: 16px;
+  height: min-content;
+  cursor: pointer;
+}
+
+.order-summary-total {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.order-summary-total .discounted-price {
+  font-size: 18px;
+}
+
+.order-summary-total .original-price {
+  font-size: 13px;
+  color: var(--color-text-grey);
+  text-decoration: line-through;
+}
+
+/* LOGO + EXPRESS CHECKOUT STYLES SECTION ----------------------------------------------*/
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.twinkling-tree-logo {
+  height: 43px;
+  width: 215px;
+}
+
+.express-checkout-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 0;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+}
+
+.express-checkout-cc {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.express-checkout-title,
+.express-checkout-or,
+.express-checkout-cc {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.express-checkout-title {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+}
+
+.express-checkout-or {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+}
+
+.payment-link-btn {
+  display: flex;
+  width: 160px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-yellow);
+  border-radius: 8px;
+}
+
+.payment-icon {
+  height: 20px;
+}
+
+.payment-link-btn:nth-child(3) {
+  background-color: #fed865;
+}
+
+/* CONTACT INFO + FORM FIELDS ----------------------------------------------*/
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-info-section .section-titles {
+  margin-bottom: 0;
+}
+
+.contact-info-section .field input {
+  width: 100%;
+}
+
+/* SHIPPING ADDRESS STYLES SECTION ----------------------------------------------*/
+.shipping-address-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shipping-address-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shipping-address-fields .select-combo {
+  width: 100%;
+}
+
+/* BILLING ADDRESS + SHIPPING METHOD STYLES SECTION ----------------------------------------------*/
+
+.billing-address-section,
+.shipping-method-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.billing-address-fields,
+.shipping-method-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+  padding: 14px;
+}
+
+.shipping-option-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.shipping-option-details {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.shipping-method-label {
+  font-size: 15px;
+  color: var(--color-dark-grey);
+}
+
+.shipping-method-price {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+/* DISCOUNT CODE STYLES SECTION ----------------------------------------------*/
+
+.discount-code-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.discount-code-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.discount-code-fields input {
+  width: 100%;
+}
+
+.discount-code-fields button {
+  min-width: 102px;
+}
+
+/* RESPONSIVE STYLE SECTION ----------------------------------------------*/
+@media (min-width: 480px) {
+  .express-checkout-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
