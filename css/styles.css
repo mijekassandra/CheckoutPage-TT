@@ -1,97 +1,99 @@
-/* FONT SECTION ----------------------------------- */
+/* FONT SECTION -----------------------------------
+
+   300 Light · 350 Book · 400 Roman · 500 Medium · 700 Heavy · 900 Black */
 
 @font-face {
-  font-family: "Avenir LT Pro Light";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProLight.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Light";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProLightOblique.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Book";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProBook.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 350;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Book";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProBookOblique.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 350;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Roman";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProRoman.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Roman";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProOblique.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Medium";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProMedium.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Medium";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProMediumOblique.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Heavy";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProHeavy.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Heavy";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProHeavyOblique.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Black";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProBlack.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir LT Pro Black";
+  font-family: "Avenir LT Pro";
   src: url("../assets/font/AvenirLTProBlackOblique.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
@@ -99,7 +101,7 @@
 /* MAIN ELEMENTS SECTION ----------------------------------------------*/
 
 :root {
-  --font-primary: "Avenir LT Pro Roman";
+  --font-primary: "Avenir LT Pro";
 
   --color-white: #ffffff;
   --color-black: #292929;
@@ -113,6 +115,7 @@
   --color-light-green: #5dac63;
   --color-blue: #0a609b;
 
+  --color-border: #bbbbbb;
   --color-red-error: #b73636;
 }
 
@@ -128,6 +131,7 @@ html {
 
 body {
   font-family: var(--font-primary), sans-serif;
+  font-weight: 400;
   line-height: 1.6;
   overflow-x: hidden;
   background-color: var(--color-white);
@@ -167,21 +171,50 @@ h4,
 h5,
 h6,
 p {
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
   color: var(--color-black);
   letter-spacing: 0.35px;
 }
 
 input {
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 12px 14px;
-  color: var(--color-dark-grey);
+  color: var(--color-black);
   min-height: 48px;
   padding: 12px 14px;
   font-size: 13px;
   line-height: 24px;
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
+}
+
+input::placeholder {
+  color: var(--color-grey-placeholder);
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--color-grey-placeholder);
+}
+
+input::-moz-placeholder {
+  color: var(--color-grey-placeholder);
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--color-black);
+}
+
+footer {
+  padding: 14px;
+}
+
+footer p {
+  font-size: 13px;
+  text-align: center;
+  line-height: 22px;
+  color: var(--color-dark-grey);
 }
 
 /* GLOBAL STYLES SECTION ----------------------------------------------*/
@@ -201,20 +234,48 @@ input {
   color: var(--color-black);
 }
 
+.section-subtitles {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.link-text {
+  text-decoration: underline;
+}
+
 .btn-primary {
   background-color: var(--color-black);
   color: var(--color-white);
   text-transform: uppercase;
   border-radius: 8px;
-  padding: 12px 30pxpx;
+  padding: 12px 30px;
   cursor: pointer;
 
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.5px;
   min-height: 40px;
+}
+
+/* BUTTON WITH ICON STYLES SECTION ----------------------------------------------*/
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-with-icon--block {
+  width: 100%;
+}
+
+.btn-with-icon__icon {
+  flex-shrink: 0;
+  display: block;
+  width: 20px;
+  object-fit: contain;
 }
 
 /* FORM FIELDS STYLES SECTION ----------------------------------------------*/
@@ -233,6 +294,32 @@ input {
 
 .input-helper--error {
   color: var(--color-red-error);
+}
+
+/* FIELD WITH ICON STYLES SECTION ----------------------------------------------*/
+
+.field--with-icon .field__input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.field--with-icon .field__input-wrap input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.field__input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.tooltip-style {
+  cursor: pointer !important;
 }
 
 /* DROPDOWN CUSTOM SELECT STYLES SECTION ----------------------------------------------*/
@@ -254,7 +341,7 @@ input {
   min-height: 48px;
   padding: 0;
   margin: 0;
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   background-color: var(--color-white);
   cursor: pointer;
@@ -288,7 +375,7 @@ input {
 }
 
 .select-combo__label {
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
   font-size: 11px;
   line-height: 1.25;
   letter-spacing: 0.25px;
@@ -296,7 +383,7 @@ input {
 }
 
 .select-combo__value {
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
   font-size: 13px;
   line-height: 1.35;
   letter-spacing: 0.35px;
@@ -371,7 +458,7 @@ input {
   max-height: 240px;
   overflow-y: auto;
   background-color: var(--color-white);
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   box-shadow: 0 10px 28px rgba(41, 41, 41, 0.12);
   scroll-behavior: smooth;
@@ -385,7 +472,7 @@ input {
   margin: 0;
   padding: 11px 12px 11px 14px;
   border-radius: 6px;
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
   font-size: 13px;
   line-height: 1.35;
   letter-spacing: 0.35px;
@@ -403,7 +490,8 @@ input {
 }
 
 .select-combo__option--selected {
-  font-family: "Avenir LT Pro Medium", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
+  font-weight: 500;
   background-color: var(--color-grey-selected);
   color: var(--color-black);
 }
@@ -459,11 +547,12 @@ input {
   align-items: center;
   gap: 12px;
   cursor: pointer;
-  font-family: "Avenir LT Pro Roman", sans-serif;
+  font-family: "Avenir LT Pro", sans-serif;
   font-size: 13px;
   line-height: 1.5;
   letter-spacing: 0.35px;
   color: var(--color-black);
+  width: 100%;
 }
 
 .radio-group .radio-group__option label::before {
@@ -499,6 +588,10 @@ input {
 }
 
 /* ORDER SUMMARY STYLES SECTION ----------------------------------------------*/
+.order-summary {
+  width: 100%;
+}
+
 .order-summary-section {
   width: 100%;
   max-width: 100%;
@@ -508,6 +601,30 @@ input {
   justify-content: space-between;
   align-items: center;
   padding: 12px 14px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.order-summary-section:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.order-summary-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.order-summary-panel.order-summary-panel--collapsed {
+  grid-template-rows: 0fr;
+}
+
+.order-summary-panel-inner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .order-summary-menu {
@@ -530,7 +647,11 @@ input {
 .chevron-up-down-icon {
   width: 16px;
   height: min-content;
-  cursor: pointer;
+  transition: transform 0.35s ease;
+}
+
+.order-summary-section[aria-expanded="false"] .chevron-up-down-icon {
+  transform: rotate(180deg);
 }
 
 .order-summary-total {
@@ -540,13 +661,97 @@ input {
 }
 
 .order-summary-total .discounted-price {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .order-summary-total .original-price {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-grey);
   text-decoration: line-through;
+}
+
+/* ORDER SUMMARY CONTAINER STYLES SECTION ----------------------------------------------*/
+
+.order-summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: var(--color-grey);
+  padding: 24px 14px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.order-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.order-item-image {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.order-item-image-container {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  flex-shrink: 0;
+  min-width: 68px;
+}
+
+.order-count-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(35%, -35%);
+  width: 26px;
+  height: 26px;
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  text-align: center;
+  line-height: 26px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.order-item-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-black);
+}
+
+.order-tax-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-block: 18px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.amount-group,
+.total-amount-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount-group p:nth-child(1) {
+  color: var(--color-grey-placeholder);
 }
 
 /* LOGO + EXPRESS CHECKOUT STYLES SECTION ----------------------------------------------*/
@@ -575,7 +780,7 @@ input {
   gap: 10px;
   padding: 24px 0;
   border-radius: 8px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--color-border);
 }
 
 .express-checkout-cc {
@@ -676,7 +881,7 @@ input {
   flex-direction: column;
   gap: 16px;
   border-radius: 8px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--color-border);
   padding: 14px;
 }
 
@@ -727,6 +932,305 @@ input {
 
 .discount-code-fields button {
   min-width: 102px;
+}
+
+/* PAYMENT INFO STYLES SECTION ----------------------------------------------*/
+
+.payment-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-type-container {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-type-container .radio-group {
+  gap: 0 !important;
+  width: 100%;
+}
+
+.payment-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.credit-card-option-label {
+  align-items: flex-start !important;
+}
+
+.credit-card-option-label__main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.credit-card-option-label__title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.credit-card-option-label__cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.accepted-cards-img {
+  height: 24px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* .credit-card-option-label__more {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-grey);
+  letter-spacing: 0.2px;
+  margin-right: 24px;
+} */
+
+.payment-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--color-grey);
+  padding: 14px;
+}
+
+.payment-details-container.payment-details-container--hidden {
+  display: none;
+}
+
+.payment-discount-wrapper {
+  display: grid;
+  gap: 8px;
+}
+
+.checkbox-discount-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+}
+
+.checkbox-discount-container input {
+  width: 22px;
+  height: 22px;
+}
+
+.checkbox-discount-container label {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 24px;
+  color: var(--color-black);
+}
+
+.payment-discount-wrapper p {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--color-black);
+}
+
+.payment-complete-order-btn {
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.btn-primary--complete-order {
+  padding: 14px 28px;
+  background-color: #1c1c1c;
+  border: none;
+  border-radius: 10px;
+}
+
+/* CUSTOMER REVIEW STYLES SECTION ----------------------------------------------*/
+
+.customer-review-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--color-grey);
+  padding: 20px 14px;
+}
+
+.customer-review-section h4 {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.customer-review-section p {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+}
+.customer-review-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 14px;
+}
+
+.trust-pilot-logo {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Trustpilot-style stars section ----------------------------------------------*/
+
+.star-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.tp-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.tp-star {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: #dcdce6;
+}
+
+.tp-star--full {
+  background-color: var(--color-green);
+}
+
+.tp-star--half {
+  background: linear-gradient(to right, var(--color-green) 50%, #dcdce6 50%);
+}
+
+.tp-star img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* CUSTOMER REVIEW STAR RATING SECTION ----------------------------------------------*/
+.star-section-wrapper--review {
+  gap: 0;
+  align-items: center;
+}
+
+.review-star-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.review-star {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background-color: #e8e8ec;
+}
+
+.review-star--full {
+  background-color: #f2d975;
+}
+
+.review-star--half {
+  background: linear-gradient(to right, #f2d975 50%, #e8e8ec 50%);
+}
+
+/* CUSTOMER REVIEW CARD STYLES SECTION ----------------------------------------------*/
+.customer-review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customer-review-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  gap: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 3px 26px 0 rgba(0, 0, 0, 0.08);
+}
+
+.customer-review-card-header {
+  display: flex;
+  gap: 18px;
+}
+
+.customer-review-card-header p {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--color-black);
+}
+
+.customer-review-card-header b {
+  font-weight: 600;
+}
+
+.verified-buyer-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verified-buyer-badge img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.verified-buyer-badge p {
+  font-size: 13px;
+  line-height: 13px;
+  color: var(--color-light-green);
+}
+
+.customer-review-card-text {
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--color-black);
+  text-align: left !important;
 }
 
 /* RESPONSIVE STYLE SECTION ----------------------------------------------*/

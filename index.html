@@ -7,25 +7,91 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="order-summary-section">
-      <div class="order-summary-menu">
-        <img
-          src="assets/images/cart-icon.png"
-          alt="cart-icon"
-          class="cart-icon"
-        />
-        <p>Order Summary</p>
-        <img
-          src="assets/images/chevronUpDown.png"
-          alt="chevronUpDown"
-          class="chevron-up-down-icon"
-        />
+    <div class="order-summary">
+      <button
+        type="button"
+        class="order-summary-section"
+        id="order-summary-toggle"
+        aria-expanded="false"
+        aria-controls="order-summary-panel"
+      >
+        <div class="order-summary-menu">
+          <img src="assets/images/cart-icon.png" alt="" class="cart-icon" />
+          <p>Order Summary</p>
+          <img
+            src="assets/images/chevronUpDown.png"
+            alt=""
+            class="chevron-up-down-icon"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="order-summary-total">
+          <p class="original-price">$159.98</p>
+          <p class="discounted-price">$82.96</p>
+        </div>
+      </button>
+      <div
+        class="order-summary-panel order-summary-panel--collapsed"
+        id="order-summary-panel"
+        aria-hidden="true"
+      >
+        <div class="order-summary-panel-inner">
+          <section class="order-summary-container">
+            <div class="order-item-wrapper">
+              <div class="order-item-container">
+                <div class="order-item-image-container">
+                  <img
+                    src="assets/images/Fairy Light Spirit Tree.png"
+                    alt="order-item-image"
+                    class="order-item-image"
+                  />
+                  <span class="order-count-badge"> 1 </span>
+                </div>
+                <p class="order-item-title">Fairy Light Spirit Tree</p>
+                <div class="order-summary-total">
+                  <p class="original-price">$79.99</p>
+                  <p class="discounted-price">$39.99</p>
+                </div>
+              </div>
+            </div>
+            <div class="order-item-wrapper">
+              <div class="order-item-container">
+                <div class="order-item-image-container">
+                  <img
+                    src="assets/images/Enchanted Lunar Lamp.png"
+                    alt="order-item-image"
+                    class="order-item-image"
+                  />
+                  <span class="order-count-badge"> 1 </span>
+                </div>
+                <p class="order-item-title">Enchanted Lunar Lamp</p>
+                <div class="order-summary-total">
+                  <p class="original-price">$79.99</p>
+                  <p class="discounted-price">$39.99</p>
+                </div>
+              </div>
+            </div>
+            <div class="order-tax-group">
+              <div class="amount-group">
+                <p>Tax</p>
+                <p>$2.98</p>
+              </div>
+              <div class="amount-group">
+                <p>Shipping</p>
+                <p>$0.00</p>
+              </div>
+            </div>
+            <div class="total-amount-group">
+              <p>Total</p>
+              <div class="order-summary-total">
+                <p class="original-price">$159.98</p>
+                <p class="discounted-price">$82.96</p>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <div class="order-summary-total">
-        <p class="discounted-price">$28.99</p>
-        <p class="original-price">$48.00</p>
-      </div>
-    </header>
+    </div>
     <main class="main-container">
       <section class="logo-section">
         <img
@@ -82,7 +148,7 @@
               type="text"
               id="shipping-first-name"
               name="shipping-first-name"
-              placeholder="First Name*"
+              placeholder="First Name"
               aria-required="true"
               aria-describedby="shipping-first-name-helper"
               required
@@ -93,31 +159,10 @@
               type="text"
               id="shipping-last-name"
               name="shipping-last-name"
-              placeholder="Last Name*"
+              placeholder="Last Name"
               aria-required="true"
               aria-describedby="shipping-last-name-helper"
               required
-            />
-          </div>
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-address"
-              name="shipping-address"
-              placeholder="Address*"
-              aria-required="true"
-              aria-describedby="shipping-last-name-helper"
-              required
-            />
-          </div>
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-apt-suite"
-              name="shipping-apt-suite"
-              placeholder="Apt, suite, etc. (optional)"
-              aria-required="true"
-              aria-describedby="shipping-apt-suite-helper"
             />
           </div>
           <div class="field">
@@ -172,7 +217,7 @@
                 tabindex="-1"
                 aria-hidden="true"
               >
-                <option value="" selected disabled>Select country*</option>
+                <option value="" selected disabled>Select country</option>
                 <option value="united-states">United States</option>
                 <option value="canada">Canada</option>
                 <option value="mexico">Mexico</option>
@@ -181,12 +226,33 @@
           </div>
           <div class="field">
             <input
-              type=""
-              id="shipping-zip-code"
-              name="shipping-zip-code"
-              placeholder="Zip Code*"
+              type="text"
+              id="shipping-address"
+              name="shipping-address"
+              placeholder="Address"
               aria-required="true"
-              aria-describedby="shipping-zip-code-helper"
+              aria-describedby="shipping-last-name-helper"
+              required
+            />
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-apt-suite"
+              name="shipping-apt-suite"
+              placeholder="Apartment, suite, etc. (optional)"
+              aria-required="true"
+              aria-describedby="shipping-apt-suite-helper"
+            />
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              id="shipping-city"
+              name="shipping-city"
+              placeholder="City"
+              aria-required="true"
+              aria-describedby="shipping-city-helper"
             />
           </div>
           <div class="field">
@@ -208,7 +274,7 @@
                     id="shipping-state-value"
                     class="select-combo__value"
                     data-select-display
-                    >Select state*</span
+                    >Select state</span
                   >
                 </span>
                 <span class="select-combo__suffix">
@@ -253,15 +319,14 @@
               </select>
             </div>
           </div>
-
           <div class="field">
             <input
-              type="text"
-              id="shipping-city"
-              name="shipping-city"
-              placeholder="City*"
+              type=""
+              id="shipping-zip-code"
+              name="shipping-zip-code"
+              placeholder="Zip Code"
               aria-required="true"
-              aria-describedby="shipping-city-helper"
+              aria-describedby="shipping-zip-code-helper"
             />
           </div>
           <div class="field">
@@ -269,7 +334,7 @@
               type="tel"
               id="shipping-phone-number"
               name="shipping-phone-number"
-              placeholder="Phone Number*"
+              placeholder="Phone"
               aria-required="true"
               aria-describedby="shipping-phone-number-helper"
             />
@@ -335,7 +400,7 @@
         <div class="discount-code-fields">
           <input
             type="text"
-            placeholder="Discount code"
+            placeholder="Gift card or Discount code"
             id="discount-code"
             name="discount-code"
           />
@@ -349,10 +414,247 @@
           </button>
         </div>
       </section>
+
+      <section class="payment-info-section">
+        <p class="section-titles">Payment Information</p>
+        <p class="section-subtitles">
+          All transactions are secured and encrypted.
+        </p>
+        <div class="payment-type-container">
+          <div class="radio-group">
+            <div class="radio-group__option payment-radio-option">
+              <input
+                type="radio"
+                name="payment-method"
+                id="credit-card-option"
+                value="credit-card"
+                checked
+              />
+              <label for="credit-card-option" class="credit-card-option-label">
+                <span class="credit-card-option-label__main">
+                  <span class="credit-card-option-label__title"
+                    >Credit Card</span
+                  >
+                  <span class="credit-card-option-label__cards">
+                    <img
+                      src="assets/images/accepted_credits_card.png.png"
+                      alt="Accepted cards: Visa, Mastercard, American Express, JCB"
+                      class="accepted-cards-img"
+                    />
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div
+              class="payment-details-container"
+              id="payment-details-container"
+              aria-hidden="false"
+            >
+              <div class="field field--with-icon">
+                <div class="field__input-wrap">
+                  <input
+                    type="text"
+                    id="credit-card-number"
+                    name="credit-card-number"
+                    placeholder="Credit Card Number"
+                    aria-required="true"
+                    aria-describedby="credit-card-number-helper"
+                  />
+                  <img
+                    src="assets/images/lock-icon.png"
+                    alt=""
+                    class="field__input-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="credit-card-name"
+                  name="credit-card-name"
+                  placeholder="Name on Card"
+                  aria-required="true"
+                  aria-describedby="credit-card-name-helper"
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="credit-card-expiration-date"
+                  name="credit-card-expiration-date"
+                  placeholder="MM / YY"
+                  aria-required="true"
+                  aria-describedby="credit-card-expiration-date-helper"
+                />
+              </div>
+              <div class="field field--with-icon">
+                <div class="field__input-wrap">
+                  <input
+                    type="text"
+                    id="credit-card-cvv"
+                    name="credit-card-cvv"
+                    placeholder="Security Code"
+                    aria-required="true"
+                    aria-describedby="credit-card-cvv-helper"
+                  />
+                  <img
+                    src="assets/images/info-icon.png"
+                    alt=""
+                    class="field__input-icon tooltip-style"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="radio-group__option payment-radio-option">
+              <input
+                type="radio"
+                name="payment-method"
+                id="paypal-option"
+                value="paypal"
+              />
+              <label for="paypal-option">
+                <img
+                  src="assets/images/paypal.png"
+                  alt="PayPal logo"
+                  class="payment-icon"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="payment-discount-wrapper">
+          <div class="checkbox-discount-container">
+            <input
+              type="checkbox"
+              id="payment-discount-checkbox"
+              name="discount-checkbox"
+            />
+            <label for="payment-discount-checkbox"
+              >Get 25% OFF on Your Next Order</label
+            >
+          </div>
+          <p>
+            Want exclusive deals? Check this box to receive the best offers to
+            your phone. You can reply STOP to cancel or HELP for help. Msg
+            frequency varies. Msg & data rates may apply. See
+            <a href="#" class="link-text">Terms</a> &
+            <a href="#" class="link-text">Privacy</a>.
+          </p>
+        </div>
+        <div class="payment-complete-order-btn">
+          <button
+            type="button"
+            class="btn-primary btn-with-icon btn-with-icon--block btn-primary--complete-order"
+          >
+            <img
+              src="assets/images/lock-icon-white.png"
+              alt=""
+              class="btn-with-icon__icon"
+            />
+            <span>COMPLETE ORDER</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="customer-review-section">
+        <h4>What Happy Customers are Saying</h4>
+        <div class="customer-review-header">
+          <img
+            src="assets/images/trust-pilot.png"
+            alt="trust-pilot-logo"
+            class="trust-pilot-logo"
+          />
+
+          <div class="star-section-wrapper">
+            <div
+              class="star-section tp-rating"
+              data-rating="4.6"
+              role="img"
+              aria-label="Trustpilot rating"
+            ></div>
+            <p class="tp-rating-value" aria-hidden="true"></p>
+          </div>
+        </div>
+        <p>And more than 3,000 in store reviews!</p>
+        <div class="customer-review-container">
+          <div class="customer-review-card">
+            <div class="customer-review-card-header">
+              <p><b>Christina Z.,</b> Dallas,TX</p>
+              <div class="verified-buyer-badge">
+                <img src="assets/images/trustpilot-checkbox.png" alt="star" />
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <div class="star-section-wrapper star-section-wrapper--review">
+              <div
+                class="star-section review-star-rating"
+                data-rating="5"
+                role="img"
+                aria-label="Customer review rating"
+              ></div>
+            </div>
+            <p class="customer-review-card-text">
+              After my Fairy Light Spirit tree arrived I absolutely fell in LOVE
+              with it! I couldn’t help myself and ordered 3 more!
+            </p>
+          </div>
+          <div class="customer-review-card">
+            <div class="customer-review-card-header">
+              <p><b>Brittany M.,</b> Miami, FL</p>
+              <div class="verified-buyer-badge">
+                <img src="assets/images/trustpilot-checkbox.png" alt="star" />
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <div class="star-section-wrapper star-section-wrapper--review">
+              <div
+                class="star-section review-star-rating"
+                data-rating="5"
+                role="img"
+                aria-label="Customer review rating"
+              ></div>
+            </div>
+            <p class="customer-review-card-text">
+              TwinklingTree is my go to store for home decor! All their pieces
+              are so stunning and unique! I don’t miss shopping in stores at
+              all. This is as easy as it comes. Check out online and receive a
+              beautiful statement piece at your doorstep!
+            </p>
+          </div>
+          <div class="customer-review-card">
+            <div class="customer-review-card-header">
+              <p><b>Katy B.,</b> London, UK</p>
+              <div class="verified-buyer-badge">
+                <img src="assets/images/trustpilot-checkbox.png" alt="star" />
+                <p>Verified Buyer</p>
+              </div>
+            </div>
+            <div class="star-section-wrapper star-section-wrapper--review">
+              <div
+                class="star-section review-star-rating"
+                data-rating="5"
+                role="img"
+                aria-label="Customer review rating"
+              ></div>
+            </div>
+            <p class="customer-review-card-text">
+              This was my first time buying home decor from Facebook, and
+              customer service came to the rescue. 10/10 service!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- <footer>
-      <p>footer here</p>
-    </footer> -->
+    <footer>
+      <p>TwinklingTree, All rights reserved.</p>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
