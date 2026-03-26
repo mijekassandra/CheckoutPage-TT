@@ -3,502 +3,527 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Checkout-TwinklingTree</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="order-summary">
-      <button
-        type="button"
-        class="order-summary-section"
-        id="order-summary-toggle"
-        aria-expanded="false"
-        aria-controls="order-summary-panel"
-      >
-        <div class="order-summary-menu">
-          <img src="assets/images/cart-icon.png" alt="" class="cart-icon" />
-          <p>Order Summary</p>
-          <img
-            src="assets/images/chevronUpDown.png"
-            alt=""
-            class="chevron-up-down-icon"
-            aria-hidden="true"
-          />
-        </div>
-        <div class="order-summary-total">
-          <p class="original-price">$159.98</p>
-          <p class="discounted-price">$82.96</p>
-        </div>
-      </button>
-      <div
-        class="order-summary-panel order-summary-panel--collapsed"
-        id="order-summary-panel"
-        aria-hidden="true"
-      >
-        <div class="order-summary-panel-inner">
-          <section class="order-summary-container">
-            <div class="order-item-wrapper">
-              <div class="order-item-container">
-                <div class="order-item-image-container">
-                  <img
-                    src="assets/images/Fairy Light Spirit Tree.png"
-                    alt="order-item-image"
-                    class="order-item-image"
-                  />
-                  <span class="order-count-badge"> 1 </span>
-                </div>
-                <p class="order-item-title">Fairy Light Spirit Tree</p>
-                <div class="order-summary-total">
-                  <p class="original-price">$79.99</p>
-                  <p class="discounted-price">$39.99</p>
-                </div>
-              </div>
-            </div>
-            <div class="order-item-wrapper">
-              <div class="order-item-container">
-                <div class="order-item-image-container">
-                  <img
-                    src="assets/images/Enchanted Lunar Lamp.png"
-                    alt="order-item-image"
-                    class="order-item-image"
-                  />
-                  <span class="order-count-badge"> 1 </span>
-                </div>
-                <p class="order-item-title">Enchanted Lunar Lamp</p>
-                <div class="order-summary-total">
-                  <p class="original-price">$79.99</p>
-                  <p class="discounted-price">$39.99</p>
-                </div>
-              </div>
-            </div>
-            <div class="order-tax-group">
-              <div class="amount-group">
-                <p>Tax</p>
-                <p>$2.98</p>
-              </div>
-              <div class="amount-group">
-                <p>Shipping</p>
-                <p>$0.00</p>
-              </div>
-            </div>
-            <div class="total-amount-group">
-              <p>Total</p>
-              <div class="order-summary-total">
-                <p class="original-price">$159.98</p>
-                <p class="discounted-price">$82.96</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-    <main class="main-container">
-      <section class="logo-section">
-        <img
-          src="assets/images/twinkling-tree-logo.png"
-          alt="twinkling-tree-logo"
-          class="twinkling-tree-logo"
-        />
-        <div class="express-checkout-section">
-          <p class="express-checkout-title">Express Checkout</p>
-          <a class="payment-link-btn">
-            <img
-              src="assets/images/paypal.png"
-              alt="paypal-logo"
-              class="payment-icon"
-            />
-          </a>
-          <a class="payment-link-btn">
-            <img
-              src="assets/images/apple-pay.png"
-              alt="amazon-logo"
-              class="payment-icon"
-            />
-          </a>
-          <p class="express-checkout-or">Or</p>
-          <p class="express-checkout-cc">
-            Continue below to pay with a credit card
-          </p>
-        </div>
-      </section>
-      <section class="contact-info-section">
-        <p class="section-titles">Contact Information</p>
-        <div class="field">
-          <input
-            type="email"
-            id="contact-email"
-            name="email"
-            autocomplete="email"
-            placeholder="Email*"
-            aria-required="true"
-            aria-describedby="contact-email-helper"
-            required
-          />
-          <p id="contact-email-helper" class="input-helper">
-            Email is required
-          </p>
-        </div>
-      </section>
-      <section class="shipping-address-section">
-        <p class="section-titles">Shipping Address</p>
-
-        <div class="shipping-address-fields">
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-first-name"
-              name="shipping-first-name"
-              placeholder="First Name"
-              aria-required="true"
-              aria-describedby="shipping-first-name-helper"
-              required
-            />
-          </div>
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-last-name"
-              name="shipping-last-name"
-              placeholder="Last Name"
-              aria-required="true"
-              aria-describedby="shipping-last-name-helper"
-              required
-            />
-          </div>
-          <div class="field">
-            <div class="select-combo" data-custom-select>
-              <button
-                type="button"
-                class="select-combo__trigger"
-                id="shipping-country-trigger"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-controls="shipping-country-listbox"
-                aria-labelledby="shipping-country-label shipping-country-value"
-              >
-                <span class="select-combo__main">
-                  <span id="shipping-country-label" class="select-combo__label"
-                    >Country</span
-                  >
-                  <span
-                    id="shipping-country-value"
-                    class="select-combo__value"
-                    data-select-display
-                    >United States</span
-                  >
-                </span>
-                <span class="select-combo__suffix">
-                  <span class="select-combo__divider" aria-hidden="true"></span>
-                  <svg
-                    class="icon-chevron-down select-combo__chevron"
-                    width="16"
-                    height="8"
-                    viewBox="0 0 10 5"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon points="0,0 10,0 5,5" fill="#888888" />
-                  </svg>
-                </span>
-              </button>
-              <div class="select-combo__dropdown" data-select-dropdown>
-                <ul
-                  class="select-combo__list"
-                  role="listbox"
-                  id="shipping-country-listbox"
-                  tabindex="-1"
-                ></ul>
-              </div>
-              <select
-                id="shipping-country"
-                name="shipping-country"
-                class="select-combo__native-sr"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <option value="" selected disabled>Select country</option>
-                <option value="united-states">United States</option>
-                <option value="canada">Canada</option>
-                <option value="mexico">Mexico</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-address"
-              name="shipping-address"
-              placeholder="Address"
-              aria-required="true"
-              aria-describedby="shipping-last-name-helper"
-              required
-            />
-          </div>
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-apt-suite"
-              name="shipping-apt-suite"
-              placeholder="Apartment, suite, etc. (optional)"
-              aria-required="true"
-              aria-describedby="shipping-apt-suite-helper"
-            />
-          </div>
-          <div class="field">
-            <input
-              type="text"
-              id="shipping-city"
-              name="shipping-city"
-              placeholder="City"
-              aria-required="true"
-              aria-describedby="shipping-city-helper"
-            />
-          </div>
-          <div class="field">
-            <div class="select-combo" data-custom-select>
-              <button
-                type="button"
-                class="select-combo__trigger"
-                id="shipping-state-trigger"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-controls="shipping-state-listbox"
-                aria-labelledby="shipping-state-label shipping-state-value"
-              >
-                <span class="select-combo__main">
-                  <span id="shipping-state-label" class="select-combo__label"
-                    >State</span
-                  >
-                  <span
-                    id="shipping-state-value"
-                    class="select-combo__value"
-                    data-select-display
-                    >Select state</span
-                  >
-                </span>
-                <span class="select-combo__suffix">
-                  <span class="select-combo__divider" aria-hidden="true"></span>
-                  <svg
-                    class="icon-chevron-down select-combo__chevron"
-                    width="16"
-                    height="8"
-                    viewBox="0 0 10 5"
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polygon points="0,0 10,0 5,5" fill="#888888" />
-                  </svg>
-                </span>
-              </button>
-              <div class="select-combo__dropdown" data-select-dropdown>
-                <ul
-                  class="select-combo__list"
-                  role="listbox"
-                  id="shipping-state-listbox"
-                  tabindex="-1"
-                ></ul>
-              </div>
-              <select
-                id="shipping-state"
-                name="shipping-state"
-                class="select-combo__native-sr"
-                tabindex="-1"
-                aria-hidden="true"
-                aria-required="true"
-                required
-              >
-                <option value="" selected disabled>Select state*</option>
-                <option value="AL">Alabama</option>
-                <option value="AK">Alaska</option>
-                <option value="AZ">Arizona</option>
-                <option value="AR">Arkansas</option>
-                <option value="CA">California</option>
-                <option value="CO">Colorado</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <input
-              type=""
-              id="shipping-zip-code"
-              name="shipping-zip-code"
-              placeholder="Zip Code"
-              aria-required="true"
-              aria-describedby="shipping-zip-code-helper"
-            />
-          </div>
-          <div class="field">
-            <input
-              type="tel"
-              id="shipping-phone-number"
-              name="shipping-phone-number"
-              placeholder="Phone"
-              aria-required="true"
-              aria-describedby="shipping-phone-number-helper"
-            />
-          </div>
-        </div>
-        <section class="billing-address-section">
-          <p class="section-titles">Billing Address</p>
-          <div
-            class="billing-address-fields radio-group"
-            role="radiogroup"
-            aria-label="Billing address options"
+    <div class="checkout-layout">
+      <aside class="checkout-layout__sidebar">
+        <div class="order-summary">
+          <button
+            type="button"
+            class="order-summary-section"
+            id="order-summary-toggle"
+            aria-expanded="false"
+            aria-controls="order-summary-panel"
           >
-            <div class="radio-group__option">
-              <input
-                type="radio"
-                name="billing-address"
-                id="billing-address-same-as-shipping"
-                value="same"
-                checked
+            <div class="order-summary-menu">
+              <img src="assets/images/cart-icon.png" alt="" class="cart-icon" />
+              <p>Order Summary</p>
+              <img
+                src="assets/images/chevronUpDown.png"
+                alt=""
+                class="chevron-up-down-icon"
+                aria-hidden="true"
               />
-              <label for="billing-address-same-as-shipping"
-                >Same as shipping address</label
-              >
             </div>
-            <div class="radio-group__option">
-              <input
-                type="radio"
-                name="billing-address"
-                id="billing-address-different"
-                value="different"
+            <div class="order-summary-total">
+              <p class="original-price">$159.98</p>
+              <p class="discounted-price">$82.96</p>
+            </div>
+          </button>
+          <div
+            class="order-summary-panel order-summary-panel--collapsed"
+            id="order-summary-panel"
+            aria-hidden="true"
+          >
+            <div class="order-summary-panel-inner">
+              <p class="section-titles order-summary-title">Order Summary</p>
+
+              <section class="order-summary-container">
+                <div class="order-item-wrapper">
+                  <div class="order-item-container">
+                    <div class="order-item-details">
+                      <div class="order-item-image-container">
+                        <img
+                          src="assets/images/Fairy Light Spirit Tree.png"
+                          alt="order-item-image"
+                          class="order-item-image"
+                        />
+                        <span class="order-count-badge"> 1 </span>
+                      </div>
+                      <p class="order-item-title">Fairy Light Spirit Tree</p>
+                    </div>
+                    <div class="order-summary-total">
+                      <p class="original-price">$79.99</p>
+                      <p class="discounted-price">$39.99</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-item-wrapper">
+                  <div class="order-item-container">
+                    <div class="order-item-details">
+                      <div class="order-item-image-container">
+                        <img
+                          src="assets/images/Enchanted Lunar Lamp.png"
+                          alt="order-item-image"
+                          class="order-item-image"
+                        />
+                        <span class="order-count-badge"> 1 </span>
+                      </div>
+                      <p class="order-item-title">Enchanted Lunar Lamp</p>
+                    </div>
+
+                    <div class="order-summary-total">
+                      <p class="original-price">$79.99</p>
+                      <p class="discounted-price">$39.99</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-tax-group">
+                  <div class="amount-group">
+                    <p>Tax</p>
+                    <p>$2.98</p>
+                  </div>
+                  <div class="amount-group">
+                    <p>Shipping</p>
+                    <p>$0.00</p>
+                  </div>
+                </div>
+                <div class="total-amount-group">
+                  <p>Total</p>
+                  <div class="order-summary-total">
+                    <p class="original-price">$159.98</p>
+                    <p class="discounted-price">$82.96</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <section class="discount-code-section checkout-layout__discount">
+          <p class="section-titles">Discount Code</p>
+          <div class="discount-code-fields">
+            <input
+              type="text"
+              placeholder="Gift card or Discount code"
+              id="discount-code"
+              name="discount-code"
+            />
+            <button
+              type="button"
+              id="apply-discount-code"
+              name="apply-discount-code"
+              class="btn-primary"
+              disabled
+            >
+              <img src="assets/images/ArrowRight.png" alt="arrow-right" />
+            </button>
+          </div>
+        </section>
+
+        <section class="customer-review-section checkout-layout__reviews">
+          <div class="customer-review-header-wrapper">
+            <h4>What Happy Customers are Saying</h4>
+            <div class="customer-review-header">
+              <img
+                src="assets/images/trust-pilot.png"
+                alt="trust-pilot-logo"
+                class="trust-pilot-logo"
               />
-              <label for="billing-address-different"
-                >Use a different billing address</label
-              >
+
+              <div class="star-section-wrapper">
+                <div
+                  class="star-section tp-rating"
+                  data-rating="4.6"
+                  role="img"
+                  aria-label="Trustpilot rating"
+                ></div>
+                <p class="tp-rating-value" aria-hidden="true"></p>
+              </div>
+            </div>
+            <p>And more than 3,000 in store reviews!</p>
+          </div>
+
+          <div class="customer-review-container">
+            <div class="customer-review-card">
+              <div class="customer-review-card-header">
+                <p><b>Christina Z.,</b> Dallas,TX</p>
+                <div class="verified-buyer-badge">
+                  <img src="assets/images/trustpilot-checkbox.png" alt="star" />
+                  <p>Verified Buyer</p>
+                </div>
+              </div>
+              <div class="star-section-wrapper star-section-wrapper--review">
+                <div
+                  class="star-section review-star-rating"
+                  data-rating="5"
+                  role="img"
+                  aria-label="Customer review rating"
+                ></div>
+              </div>
+              <p class="customer-review-card-text">
+                After my Fairy Light Spirit tree arrived I absolutely fell in
+                LOVE with it! I couldn’t help myself and ordered 3 more!
+              </p>
+            </div>
+            <div class="customer-review-card">
+              <div class="customer-review-card-header">
+                <p><b>Brittany M.,</b> Miami, FL</p>
+                <div class="verified-buyer-badge">
+                  <img src="assets/images/trustpilot-checkbox.png" alt="star" />
+                  <p>Verified Buyer</p>
+                </div>
+              </div>
+              <div class="star-section-wrapper star-section-wrapper--review">
+                <div
+                  class="star-section review-star-rating"
+                  data-rating="5"
+                  role="img"
+                  aria-label="Customer review rating"
+                ></div>
+              </div>
+              <p class="customer-review-card-text">
+                TwinklingTree is my go to store for home decor! All their pieces
+                are so stunning and unique! I don’t miss shopping in stores at
+                all. This is as easy as it comes. Check out online and receive a
+                beautiful statement piece at your doorstep!
+              </p>
+            </div>
+            <div class="customer-review-card">
+              <div class="customer-review-card-header">
+                <p><b>Katy B.,</b> London, UK</p>
+                <div class="verified-buyer-badge">
+                  <img src="assets/images/trustpilot-checkbox.png" alt="star" />
+                  <p>Verified Buyer</p>
+                </div>
+              </div>
+              <div class="star-section-wrapper star-section-wrapper--review">
+                <div
+                  class="star-section review-star-rating"
+                  data-rating="5"
+                  role="img"
+                  aria-label="Customer review rating"
+                ></div>
+              </div>
+              <p class="customer-review-card-text">
+                This was my first time buying home decor from Facebook, and
+                customer service came to the rescue. 10/10 service!
+              </p>
             </div>
           </div>
         </section>
-      </section>
-      <section class="shipping-method-section">
-        <p class="section-titles">Shipping Method</p>
-        <div class="shipping-method-fields radio-group">
-          <div class="radio-group__option">
-            <input
-              type="radio"
-              name="shipping-method"
-              id="shipping-method-standard"
-              value="standard"
-              checked
-            />
-            <label for="shipping-method-standard" class="shipping-option-group">
-              <span class="shipping-option-details">
-                <span class="shipping-method-label"
-                  >Ground shipping: 2-7 Business Days</span
-                >
-                <span class="shipping-method-price">$19.95</span>
-              </span>
-            </label>
-          </div>
-        </div>
-      </section>
-      <section class="discount-code-section">
-        <p class="section-titles">Discount Code</p>
-        <div class="discount-code-fields">
-          <input
-            type="text"
-            placeholder="Gift card or Discount code"
-            id="discount-code"
-            name="discount-code"
-          />
-          <button
-            type="button"
-            id="apply-discount-code"
-            name="apply-discount-code"
-            class="btn-primary"
-          >
-            Apply
-          </button>
-        </div>
-      </section>
+      </aside>
 
-      <section class="payment-info-section">
-        <p class="section-titles">Payment Information</p>
-        <p class="section-subtitles">
-          All transactions are secured and encrypted.
-        </p>
-        <div class="payment-type-container">
-          <div class="radio-group">
-            <div class="radio-group__option payment-radio-option">
-              <input
-                type="radio"
-                name="payment-method"
-                id="credit-card-option"
-                value="credit-card"
-                checked
-              />
-              <label for="credit-card-option" class="credit-card-option-label">
-                <span class="credit-card-option-label__main">
-                  <span class="credit-card-option-label__title"
-                    >Credit Card</span
-                  >
-                  <span class="credit-card-option-label__cards">
-                    <img
-                      src="assets/images/accepted_credits_card.png.png"
-                      alt="Accepted cards: Visa, Mastercard, American Express, JCB"
-                      class="accepted-cards-img"
-                    />
-                  </span>
-                </span>
-              </label>
+      <div class="checkout-layout__main-column main-container">
+        <main class="checkout-layout__form-top">
+          <section class="logo-section">
+            <img
+              src="assets/images/twinkling-tree-logo.png"
+              alt="twinkling-tree-logo"
+              class="twinkling-tree-logo"
+            />
+            <div class="express-checkout-section">
+              <p class="express-checkout-title">Express Checkout</p>
+              <a class="payment-link-btn">
+                <img
+                  src="assets/images/paypal.png"
+                  alt="paypal-logo"
+                  class="payment-icon"
+                />
+              </a>
+              <a class="payment-link-btn">
+                <img
+                  src="assets/images/apple-pay.png"
+                  alt="amazon-logo"
+                  class="payment-icon"
+                />
+              </a>
+              <p class="express-checkout-or">Or</p>
+              <p class="express-checkout-cc">
+                Continue below to pay with a credit card
+              </p>
             </div>
-            <div
-              class="payment-details-container"
-              id="payment-details-container"
-              aria-hidden="false"
-            >
-              <div class="field field--with-icon">
-                <div class="field__input-wrap">
-                  <input
-                    type="text"
-                    id="credit-card-number"
-                    name="credit-card-number"
-                    placeholder="Credit Card Number"
-                    aria-required="true"
-                    aria-describedby="credit-card-number-helper"
-                  />
-                  <img
-                    src="assets/images/lock-icon.png"
-                    alt=""
-                    class="field__input-icon"
-                    width="16"
-                    height="16"
+          </section>
+          <section class="contact-info-section">
+            <p class="section-titles">Contact Information</p>
+            <div class="field">
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                autocomplete="email"
+                placeholder="Email Address"
+                aria-required="true"
+                aria-describedby="contact-email-helper"
+                required
+              />
+              <p
+                id="contact-email-helper"
+                class="input-helper input-helper--on-invalid"
+              >
+                Email is required
+              </p>
+            </div>
+          </section>
+          <section class="shipping-address-section">
+            <p class="section-titles">Shipping Address</p>
+
+            <div class="shipping-address-fields">
+              <div class="field">
+                <input
+                  type="text"
+                  id="shipping-first-name"
+                  name="shipping-first-name"
+                  placeholder="First name"
+                  aria-required="true"
+                  aria-describedby="shipping-first-name-helper"
+                  required
+                />
+                <p
+                  id="shipping-first-name-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  First name is required
+                </p>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="shipping-last-name"
+                  name="shipping-last-name"
+                  placeholder="Last name"
+                  aria-required="true"
+                  aria-describedby="shipping-last-name-helper"
+                  required
+                />
+                <p
+                  id="shipping-last-name-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  Last name is required
+                </p>
+              </div>
+              <div class="field">
+                <div class="select-combo" data-custom-select>
+                  <button
+                    type="button"
+                    class="select-combo__trigger"
+                    id="shipping-country-trigger"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="shipping-country-listbox"
+                    aria-labelledby="shipping-country-label shipping-country-value"
+                    aria-describedby="shipping-country-helper"
+                  >
+                    <span class="select-combo__main">
+                      <span
+                        id="shipping-country-label"
+                        class="select-combo__label"
+                        >Country</span
+                      >
+                      <span
+                        id="shipping-country-value"
+                        class="select-combo__value"
+                        data-select-display
+                        >United States</span
+                      >
+                    </span>
+                    <span class="select-combo__suffix">
+                      <span
+                        class="select-combo__divider"
+                        aria-hidden="true"
+                      ></span>
+                      <svg
+                        class="icon-chevron-down select-combo__chevron"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 10 5"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polygon points="0,0 10,0 5,5" fill="#888888" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-combo__dropdown" data-select-dropdown>
+                    <ul
+                      class="select-combo__list"
+                      role="listbox"
+                      id="shipping-country-listbox"
+                      tabindex="-1"
+                    ></ul>
+                  </div>
+                  <select
+                    id="shipping-country"
+                    name="shipping-country"
+                    class="select-combo__native-sr"
+                    tabindex="-1"
                     aria-hidden="true"
-                  />
+                  >
+                    <option value="" selected disabled>Select country</option>
+                    <option value="united-states">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                  </select>
                 </div>
+                <p
+                  id="shipping-country-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  Country is required
+                </p>
               </div>
               <div class="field">
                 <input
                   type="text"
-                  id="credit-card-name"
-                  name="credit-card-name"
-                  placeholder="Name on Card"
+                  id="shipping-address"
+                  name="shipping-address"
+                  placeholder="Address"
                   aria-required="true"
-                  aria-describedby="credit-card-name-helper"
+                  aria-describedby="shipping-address-helper"
+                  required
+                />
+                <p
+                  id="shipping-address-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  Address is required
+                </p>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="shipping-apt-suite"
+                  name="shipping-apt-suite"
+                  placeholder="Apartment, suite, etc. (optional)"
+                  aria-required="true"
+                  aria-describedby="shipping-apt-suite-helper"
                 />
               </div>
               <div class="field">
                 <input
                   type="text"
-                  id="credit-card-expiration-date"
-                  name="credit-card-expiration-date"
-                  placeholder="MM / YY"
+                  id="shipping-city"
+                  name="shipping-city"
+                  placeholder="City"
                   aria-required="true"
-                  aria-describedby="credit-card-expiration-date-helper"
+                  aria-describedby="shipping-city-helper"
+                  required
                 />
+                <p
+                  id="shipping-city-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  City is required
+                </p>
               </div>
+              <div class="field">
+                <div class="select-combo" data-custom-select>
+                  <button
+                    type="button"
+                    class="select-combo__trigger"
+                    id="shipping-state-trigger"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="shipping-state-listbox"
+                    aria-labelledby="shipping-state-label shipping-state-value"
+                    aria-describedby="shipping-state-helper"
+                  >
+                    <span class="select-combo__main">
+                      <span
+                        id="shipping-state-label"
+                        class="select-combo__label"
+                        >State</span
+                      >
+                      <span
+                        id="shipping-state-value"
+                        class="select-combo__value"
+                        data-select-display
+                        >Select state</span
+                      >
+                    </span>
+                    <span class="select-combo__suffix">
+                      <span
+                        class="select-combo__divider"
+                        aria-hidden="true"
+                      ></span>
+                      <svg
+                        class="icon-chevron-down select-combo__chevron"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 10 5"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polygon points="0,0 10,0 5,5" fill="#888888" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="select-combo__dropdown" data-select-dropdown>
+                    <ul
+                      class="select-combo__list"
+                      role="listbox"
+                      id="shipping-state-listbox"
+                      tabindex="-1"
+                    ></ul>
+                  </div>
+                  <select
+                    id="shipping-state"
+                    name="shipping-state"
+                    class="select-combo__native-sr"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    aria-required="true"
+                    required
+                  >
+                    <option value="" selected disabled>Select state*</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                  </select>
+                </div>
+                <p
+                  id="shipping-state-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  State is required
+                </p>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="shipping-zip-code"
+                  name="shipping-zip-code"
+                  placeholder="ZIP code"
+                  aria-required="true"
+                  aria-describedby="shipping-zip-code-helper"
+                  required
+                />
+                <p
+                  id="shipping-zip-code-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  Zip code is required
+                </p>
+              </div>
+
               <div class="field field--with-icon">
                 <div class="field__input-wrap">
                   <input
-                    type="text"
-                    id="credit-card-cvv"
-                    name="credit-card-cvv"
-                    placeholder="Security Code"
+                    type="tel"
+                    id="shipping-phone-number"
+                    name="shipping-phone-number"
+                    placeholder="Phone"
                     aria-required="true"
-                    aria-describedby="credit-card-cvv-helper"
+                    aria-describedby="shipping-phone-number-helper"
+                    required
                   />
                   <img
                     src="assets/images/info-icon.png"
@@ -509,152 +534,470 @@
                     aria-hidden="true"
                   />
                 </div>
+                <p
+                  id="shipping-phone-number-helper"
+                  class="input-helper input-helper--on-invalid"
+                >
+                  Phone number is required
+                </p>
               </div>
             </div>
+            <section class="billing-address-section">
+              <p class="section-titles">Billing Address</p>
+              <div
+                class="billing-address-fields radio-group"
+                role="radiogroup"
+                aria-label="Billing address options"
+              >
+                <div class="radio-group__option billing-radio-option">
+                  <input
+                    type="radio"
+                    name="billing-address"
+                    id="billing-address-same-as-shipping"
+                    value="same"
+                    checked
+                  />
+                  <label for="billing-address-same-as-shipping"
+                    >Same as shipping address</label
+                  >
+                </div>
 
-            <div class="radio-group__option payment-radio-option">
-              <input
-                type="radio"
-                name="payment-method"
-                id="paypal-option"
-                value="paypal"
-              />
-              <label for="paypal-option">
-                <img
-                  src="assets/images/paypal.png"
-                  alt="PayPal logo"
-                  class="payment-icon"
+                <div class="radio-group__option billing-radio-option">
+                  <input
+                    type="radio"
+                    name="billing-address"
+                    id="billing-address-different"
+                    value="different"
+                  />
+                  <label for="billing-address-different"
+                    >Use a different billing address</label
+                  >
+                </div>
+
+                <div
+                  class="billing-address-container billing-address-container--hidden"
+                  id="billing-address-fields-container"
+                  aria-hidden="true"
+                >
+                  <div class="shipping-address-fields">
+                    <div class="field">
+                      <input
+                        type="text"
+                        id="shipping-first-name"
+                        name="shipping-first-name"
+                        placeholder="First Name"
+                        aria-required="true"
+                        aria-describedby="shipping-first-name-helper"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text"
+                        id="shipping-last-name"
+                        name="shipping-last-name"
+                        placeholder="Last Name"
+                        aria-required="true"
+                        aria-describedby="shipping-last-name-helper"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <div class="select-combo" data-custom-select>
+                        <button
+                          type="button"
+                          class="select-combo__trigger"
+                          id="shipping-country-trigger"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-controls="shipping-country-listbox"
+                          aria-labelledby="shipping-country-label shipping-country-value"
+                        >
+                          <span class="select-combo__main">
+                            <span
+                              id="shipping-country-label"
+                              class="select-combo__label"
+                              >Country</span
+                            >
+                            <span
+                              id="shipping-country-value"
+                              class="select-combo__value"
+                              data-select-display
+                              >United States</span
+                            >
+                          </span>
+                          <span class="select-combo__suffix">
+                            <span
+                              class="select-combo__divider"
+                              aria-hidden="true"
+                            ></span>
+                            <svg
+                              class="icon-chevron-down select-combo__chevron"
+                              width="16"
+                              height="8"
+                              viewBox="0 0 10 5"
+                              aria-hidden="true"
+                              focusable="false"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polygon points="0,0 10,0 5,5" fill="#888888" />
+                            </svg>
+                          </span>
+                        </button>
+                        <div
+                          class="select-combo__dropdown"
+                          data-select-dropdown
+                        >
+                          <ul
+                            class="select-combo__list"
+                            role="listbox"
+                            id="shipping-country-listbox"
+                            tabindex="-1"
+                          ></ul>
+                        </div>
+                        <select
+                          id="shipping-country"
+                          name="shipping-country"
+                          class="select-combo__native-sr"
+                          tabindex="-1"
+                          aria-hidden="true"
+                        >
+                          <option value="" selected disabled>
+                            Select country
+                          </option>
+                          <option value="united-states">United States</option>
+                          <option value="canada">Canada</option>
+                          <option value="mexico">Mexico</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text"
+                        id="shipping-address"
+                        name="shipping-address"
+                        placeholder="Address"
+                        aria-required="true"
+                        aria-describedby="shipping-last-name-helper"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text"
+                        id="shipping-apt-suite"
+                        name="shipping-apt-suite"
+                        placeholder="Apartment, suite, etc. (optional)"
+                        aria-required="true"
+                        aria-describedby="shipping-apt-suite-helper"
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text"
+                        id="shipping-city"
+                        name="shipping-city"
+                        placeholder="City"
+                        aria-required="true"
+                        aria-describedby="shipping-city-helper"
+                      />
+                    </div>
+                    <div class="field">
+                      <div class="select-combo" data-custom-select>
+                        <button
+                          type="button"
+                          class="select-combo__trigger"
+                          id="shipping-state-trigger"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-controls="shipping-state-listbox"
+                          aria-labelledby="shipping-state-label shipping-state-value"
+                        >
+                          <span class="select-combo__main">
+                            <span
+                              id="shipping-state-label"
+                              class="select-combo__label"
+                              >State</span
+                            >
+                            <span
+                              id="shipping-state-value"
+                              class="select-combo__value"
+                              data-select-display
+                              >Select state</span
+                            >
+                          </span>
+                          <span class="select-combo__suffix">
+                            <span
+                              class="select-combo__divider"
+                              aria-hidden="true"
+                            ></span>
+                            <svg
+                              class="icon-chevron-down select-combo__chevron"
+                              width="16"
+                              height="8"
+                              viewBox="0 0 10 5"
+                              aria-hidden="true"
+                              focusable="false"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <polygon points="0,0 10,0 5,5" fill="#888888" />
+                            </svg>
+                          </span>
+                        </button>
+                        <div
+                          class="select-combo__dropdown"
+                          data-select-dropdown
+                        >
+                          <ul
+                            class="select-combo__list"
+                            role="listbox"
+                            id="shipping-state-listbox"
+                            tabindex="-1"
+                          ></ul>
+                        </div>
+                        <select
+                          id="shipping-state"
+                          name="shipping-state"
+                          class="select-combo__native-sr"
+                          tabindex="-1"
+                          aria-hidden="true"
+                          aria-required="true"
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Select state*
+                          </option>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <option value="AZ">Arizona</option>
+                          <option value="AR">Arkansas</option>
+                          <option value="CA">California</option>
+                          <option value="CO">Colorado</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <input
+                        type=""
+                        id="shipping-zip-code"
+                        name="shipping-zip-code"
+                        placeholder="Zip Code"
+                        aria-required="true"
+                        aria-describedby="shipping-zip-code-helper"
+                      />
+                    </div>
+
+                    <div class="field field--with-icon">
+                      <div class="field__input-wrap">
+                        <input
+                          type="tel"
+                          id="shipping-phone-number"
+                          name="shipping-phone-number"
+                          placeholder="Phone"
+                          aria-required="true"
+                          aria-describedby="shipping-phone-number-helper"
+                        />
+                        <img
+                          src="assets/images/info-icon.png"
+                          alt=""
+                          class="field__input-icon tooltip-style"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="shipping-method-section">
+            <p class="section-titles">Shipping Method</p>
+            <div class="shipping-method-fields radio-group">
+              <div class="radio-group__option">
+                <input
+                  type="radio"
+                  name="shipping-method"
+                  id="shipping-method-standard"
+                  value="standard"
+                  checked
                 />
-              </label>
+                <label
+                  for="shipping-method-standard"
+                  class="shipping-option-group"
+                >
+                  <span class="shipping-option-details">
+                    <span class="shipping-method-label">Tracked & Insured</span>
+                    <span class="shipping-method-price">Free</span>
+                  </span>
+                </label>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="payment-discount-wrapper">
-          <div class="checkbox-discount-container">
-            <input
-              type="checkbox"
-              id="payment-discount-checkbox"
-              name="discount-checkbox"
-            />
-            <label for="payment-discount-checkbox"
-              >Get 25% OFF on Your Next Order</label
-            >
-          </div>
-          <p>
-            Want exclusive deals? Check this box to receive the best offers to
-            your phone. You can reply STOP to cancel or HELP for help. Msg
-            frequency varies. Msg & data rates may apply. See
-            <a href="#" class="link-text">Terms</a> &
-            <a href="#" class="link-text">Privacy</a>.
+          </section>
+        </main>
+
+        <section class="payment-info-section checkout-layout__payment">
+          <p class="section-titles">Payment Information</p>
+          <p class="section-subtitles">
+            All transactions are secured and encrypted.
           </p>
-        </div>
-        <div class="payment-complete-order-btn">
-          <button
-            type="button"
-            class="btn-primary btn-with-icon btn-with-icon--block btn-primary--complete-order"
-          >
-            <img
-              src="assets/images/lock-icon-white.png"
-              alt=""
-              class="btn-with-icon__icon"
-            />
-            <span>COMPLETE ORDER</span>
-          </button>
-        </div>
-      </section>
+          <div class="payment-type-container">
+            <div class="radio-group">
+              <div class="radio-group__option payment-radio-option">
+                <input
+                  type="radio"
+                  name="payment-method"
+                  id="credit-card-option"
+                  value="credit-card"
+                  checked
+                />
+                <label
+                  for="credit-card-option"
+                  class="credit-card-option-label"
+                >
+                  <span class="credit-card-option-label__main">
+                    <span class="credit-card-option-label__title"
+                      >Credit Card</span
+                    >
+                    <span class="credit-card-option-label__cards">
+                      <img
+                        src="assets/images/accepted_credits_card.png.png"
+                        alt="Accepted cards: Visa, Mastercard, American Express, JCB"
+                        class="accepted-cards-img"
+                      />
+                    </span>
+                  </span>
+                </label>
+              </div>
 
-      <section class="customer-review-section">
-        <h4>What Happy Customers are Saying</h4>
-        <div class="customer-review-header">
-          <img
-            src="assets/images/trust-pilot.png"
-            alt="trust-pilot-logo"
-            class="trust-pilot-logo"
-          />
+              <div
+                class="payment-details-container"
+                id="payment-details-container"
+                aria-hidden="false"
+              >
+                <div class="field field--with-icon">
+                  <div class="field__input-wrap">
+                    <input
+                      type="text"
+                      id="credit-card-number"
+                      name="credit-card-number"
+                      placeholder="Credit Card Number"
+                      aria-required="true"
+                      aria-describedby="credit-card-number-helper"
+                    />
+                    <img
+                      src="assets/images/lock-icon.png"
+                      alt=""
+                      class="field__input-icon"
+                      width="16"
+                      height="16"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <input
+                    type="text"
+                    id="credit-card-name"
+                    name="credit-card-name"
+                    placeholder="Name on Card"
+                    aria-required="true"
+                    aria-describedby="credit-card-name-helper"
+                  />
+                </div>
+                <div class="field">
+                  <input
+                    type="text"
+                    id="credit-card-expiration-date"
+                    name="credit-card-expiration-date"
+                    placeholder="MM / YY"
+                    aria-required="true"
+                    aria-describedby="credit-card-expiration-date-helper"
+                  />
+                </div>
+                <div class="field field--with-icon">
+                  <div class="field__input-wrap">
+                    <input
+                      type="text"
+                      id="credit-card-cvv"
+                      name="credit-card-cvv"
+                      placeholder="Security Code"
+                      aria-required="true"
+                      aria-describedby="credit-card-cvv-helper"
+                    />
+                    <img
+                      src="assets/images/info-icon.png"
+                      alt=""
+                      class="field__input-icon tooltip-style"
+                      width="16"
+                      height="16"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              </div>
 
-          <div class="star-section-wrapper">
-            <div
-              class="star-section tp-rating"
-              data-rating="4.6"
-              role="img"
-              aria-label="Trustpilot rating"
-            ></div>
-            <p class="tp-rating-value" aria-hidden="true"></p>
+              <div class="radio-group__option payment-radio-option">
+                <input
+                  type="radio"
+                  name="payment-method"
+                  id="paypal-option"
+                  value="paypal"
+                />
+                <label for="paypal-option">
+                  <img
+                    src="assets/images/paypal.png"
+                    alt="PayPal logo"
+                    class="payment-icon"
+                  />
+                </label>
+              </div>
+            </div>
           </div>
+          <div class="payment-discount-wrapper">
+            <div class="checkbox-discount-container">
+              <input
+                type="checkbox"
+                id="payment-discount-checkbox"
+                name="discount-checkbox"
+              />
+              <label for="payment-discount-checkbox"
+                >Get 25% OFF on Your Next Order</label
+              >
+            </div>
+            <p>
+              Want exclusive deals? Check this box to receive the best offers to
+              your phone. You can reply STOP to cancel or HELP for help. Msg
+              frequency varies. Msg & data rates may apply. See
+              <a href="#" class="link-text">Terms</a> &
+              <a href="#" class="link-text">Privacy</a>.
+            </p>
+          </div>
+          <div class="payment-complete-order-btn-wrapper">
+            <div class="payment-complete-order-btn">
+              <button
+                type="button"
+                id="complete-order-btn"
+                class="btn-primary btn-with-icon btn-with-icon--block btn-primary--complete-order"
+              >
+                <img
+                  src="assets/images/lock-icon-white.png"
+                  alt=""
+                  class="btn-with-icon__icon"
+                />
+                <span>COMPLETE ORDER</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-text-wrapper checkout-layout__footer">
+          <p>TwinklingTree, All rights reserved.</p>
         </div>
-        <p>And more than 3,000 in store reviews!</p>
-        <div class="customer-review-container">
-          <div class="customer-review-card">
-            <div class="customer-review-card-header">
-              <p><b>Christina Z.,</b> Dallas,TX</p>
-              <div class="verified-buyer-badge">
-                <img src="assets/images/trustpilot-checkbox.png" alt="star" />
-                <p>Verified Buyer</p>
-              </div>
-            </div>
-            <div class="star-section-wrapper star-section-wrapper--review">
-              <div
-                class="star-section review-star-rating"
-                data-rating="5"
-                role="img"
-                aria-label="Customer review rating"
-              ></div>
-            </div>
-            <p class="customer-review-card-text">
-              After my Fairy Light Spirit tree arrived I absolutely fell in LOVE
-              with it! I couldn’t help myself and ordered 3 more!
-            </p>
-          </div>
-          <div class="customer-review-card">
-            <div class="customer-review-card-header">
-              <p><b>Brittany M.,</b> Miami, FL</p>
-              <div class="verified-buyer-badge">
-                <img src="assets/images/trustpilot-checkbox.png" alt="star" />
-                <p>Verified Buyer</p>
-              </div>
-            </div>
-            <div class="star-section-wrapper star-section-wrapper--review">
-              <div
-                class="star-section review-star-rating"
-                data-rating="5"
-                role="img"
-                aria-label="Customer review rating"
-              ></div>
-            </div>
-            <p class="customer-review-card-text">
-              TwinklingTree is my go to store for home decor! All their pieces
-              are so stunning and unique! I don’t miss shopping in stores at
-              all. This is as easy as it comes. Check out online and receive a
-              beautiful statement piece at your doorstep!
-            </p>
-          </div>
-          <div class="customer-review-card">
-            <div class="customer-review-card-header">
-              <p><b>Katy B.,</b> London, UK</p>
-              <div class="verified-buyer-badge">
-                <img src="assets/images/trustpilot-checkbox.png" alt="star" />
-                <p>Verified Buyer</p>
-              </div>
-            </div>
-            <div class="star-section-wrapper star-section-wrapper--review">
-              <div
-                class="star-section review-star-rating"
-                data-rating="5"
-                role="img"
-                aria-label="Customer review rating"
-              ></div>
-            </div>
-            <p class="customer-review-card-text">
-              This was my first time buying home decor from Facebook, and
-              customer service came to the rescue. 10/10 service!
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>TwinklingTree, All rights reserved.</p>
-    </footer>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

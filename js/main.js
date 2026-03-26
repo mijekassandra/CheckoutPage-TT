@@ -3,7 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const orderSummaryToggle = document.getElementById("order-summary-toggle");
   const orderSummaryPanel = document.getElementById("order-summary-panel");
   if (orderSummaryToggle && orderSummaryPanel) {
+    const orderSummaryDesktopMq = window.matchMedia("(min-width: 768px)");
+
+    const syncOrderSummaryDesktop = () => {
+      if (!orderSummaryDesktopMq.matches) return;
+      orderSummaryToggle.setAttribute("aria-expanded", "true");
+      orderSummaryPanel.setAttribute("aria-hidden", "false");
+      orderSummaryPanel.classList.remove("order-summary-panel--collapsed");
+    };
+
+    syncOrderSummaryDesktop();
+    orderSummaryDesktopMq.addEventListener("change", syncOrderSummaryDesktop);
+
     orderSummaryToggle.addEventListener("click", () => {
+      if (orderSummaryDesktopMq.matches) return;
       const expanded =
         orderSummaryToggle.getAttribute("aria-expanded") === "true";
       const next = !expanded;
@@ -175,6 +188,168 @@ document.addEventListener("DOMContentLoaded", () => {
       radio.addEventListener("change", syncPaymentDetails),
     );
     syncPaymentDetails();
+  }
+
+  // Billing address same / different toggle ------------------------------------------------------------
+  const billingRadios = document.querySelectorAll(
+    'input[name="billing-address"]',
+  );
+  const billingAddressContainer = document.getElementById(
+    "billing-address-fields-container",
+  );
+  if (billingRadios.length && billingAddressContainer) {
+    const syncBillingAddressVisibility = () => {
+      const differentSelected =
+        document.getElementById("billing-address-different")?.checked === true;
+      billingAddressContainer.classList.toggle(
+        "billing-address-container--hidden",
+        !differentSelected,
+      );
+      billingAddressContainer.setAttribute(
+        "aria-hidden",
+        differentSelected ? "false" : "true",
+      );
+      billingAddressContainer
+        .querySelectorAll("input, select, button")
+        .forEach((el) => {
+          el.disabled = !differentSelected;
+        });
+    };
+    billingRadios.forEach((radio) =>
+      radio.addEventListener("change", syncBillingAddressVisibility),
+    );
+    syncBillingAddressVisibility();
+  }
+
+  // Complete order: validate email + shipping address (match contact email error style)
+  const completeOrderBtn = document.getElementById("complete-order-btn");
+  const contactEmailInput = document.getElementById("contact-email");
+  const contactEmailHelper = document.getElementById("contact-email-helper");
+
+  const shippingFieldIds = [
+    "shipping-first-name",
+    "shipping-last-name",
+    "shipping-country",
+    "shipping-address",
+    "shipping-city",
+    "shipping-state",
+    "shipping-zip-code",
+    "shipping-phone-number",
+  ];
+
+  const fieldRoot = (el) => el?.closest(".field");
+
+  const setFieldInvalid = (el, invalid) => {
+    const root = fieldRoot(el);
+    if (!root) return;
+    root.classList.toggle("field--invalid", invalid);
+    if (el?.matches?.("input, select")) {
+      el.setAttribute("aria-invalid", invalid ? "true" : "false");
+    }
+    const trigger = root.querySelector(".select-combo__trigger");
+    if (trigger)
+      trigger.setAttribute("aria-invalid", invalid ? "true" : "false");
+    const nativeSelect = root.querySelector("select");
+    if (nativeSelect && nativeSelect !== el) {
+      nativeSelect.setAttribute("aria-invalid", invalid ? "true" : "false");
+    }
+  };
+
+  const clearFieldInvalid = (el) => setFieldInvalid(el, false);
+
+  const validateCompleteOrder = () => {
+    const empty = (v) => String(v ?? "").trim() === "";
+
+    let firstToFocus = null;
+
+    const mark = (control, invalid, focusTarget) => {
+      const target = focusTarget ?? control;
+      setFieldInvalid(control, invalid);
+      if (invalid && firstToFocus == null) firstToFocus = target;
+    };
+
+    const markText = (id) => {
+      const input = document.getElementById(id);
+      mark(input, !input || empty(input.value), input);
+    };
+
+    if (contactEmailInput) {
+      const emailEmpty = empty(contactEmailInput.value);
+      const emailInvalidFormat =
+        !emailEmpty && !contactEmailInput.checkValidity();
+      const bad = emailEmpty || emailInvalidFormat;
+      if (contactEmailHelper) {
+        if (emailEmpty) contactEmailHelper.textContent = "Email is required";
+        else if (emailInvalidFormat)
+          contactEmailHelper.textContent = "Enter a valid email address";
+        else contactEmailHelper.textContent = "Email is required";
+      }
+      mark(contactEmailInput, bad, contactEmailInput);
+    }
+
+    markText("shipping-first-name");
+    markText("shipping-last-name");
+
+    const countrySelect = document.getElementById("shipping-country");
+    mark(
+      countrySelect,
+      !countrySelect || empty(countrySelect.value),
+      document.getElementById("shipping-country-trigger"),
+    );
+
+    markText("shipping-address");
+    markText("shipping-city");
+
+    const stateSelect = document.getElementById("shipping-state");
+    mark(
+      stateSelect,
+      !stateSelect || empty(stateSelect.value),
+      document.getElementById("shipping-state-trigger"),
+    );
+
+    markText("shipping-zip-code");
+    markText("shipping-phone-number");
+
+    if (firstToFocus) {
+      firstToFocus.focus({ preventScroll: true });
+      firstToFocus.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+
+    return !firstToFocus;
+  };
+
+  const attachClearInvalid = (el) => {
+    if (!el) return;
+    const evt = el.tagName === "SELECT" ? "change" : "input";
+    el.addEventListener(evt, () => clearFieldInvalid(el));
+  };
+
+  if (completeOrderBtn) {
+    completeOrderBtn.addEventListener("click", () => {
+      validateCompleteOrder();
+    });
+  }
+
+  if (contactEmailInput) {
+    contactEmailInput.addEventListener("input", () => {
+      clearFieldInvalid(contactEmailInput);
+      if (contactEmailHelper)
+        contactEmailHelper.textContent = "Email is required";
+    });
+  }
+  shippingFieldIds.forEach((id) =>
+    attachClearInvalid(document.getElementById(id)),
+  );
+
+  // Discount code apply button: disabled while input is empty ---------------------------
+  const discountCodeInput = document.getElementById("discount-code");
+  const applyDiscountBtn = document.getElementById("apply-discount-code");
+  if (discountCodeInput && applyDiscountBtn) {
+    const syncDiscountApplyEnabled = () => {
+      applyDiscountBtn.disabled = discountCodeInput.value.trim() === "";
+    };
+    discountCodeInput.addEventListener("input", syncDiscountApplyEnabled);
+    syncDiscountApplyEnabled();
   }
 
   // Trustpilot star rating script --------------------------------------------------------------------
