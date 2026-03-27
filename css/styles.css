@@ -1557,7 +1557,7 @@ p.tp-rating-value {
   .checkout-layout .main-container {
     /* Max 50px / 130px; scales down below ~1300px viewport */
     padding: clamp(24px, calc(100vw * 50 / 1300), 50px)
-      clamp(24px, calc(100vw * 130 / 1300), 130px);
+      clamp(24px, calc(100vw * 130 / 1300), 115px);
   }
 
   .checkout-layout__main-column {
