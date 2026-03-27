@@ -314,6 +314,7 @@ input[type="checkbox"] {
 .section-subtitles {
   font-size: 14px;
   line-height: 16px;
+  margin-bottom: 8px;
 }
 
 .link-text {
@@ -771,7 +772,7 @@ input[type="checkbox"] {
 
 .order-summary-total {
   display: flex;
-  gap: 14x;
+  gap: 14px;
 }
 
 .order-summary-total .discounted-price {
@@ -958,7 +959,7 @@ input[type="checkbox"] {
 }
 
 .payment-icon {
-  height: 20px;
+  height: 24px;
 }
 
 .payment-link-btn:nth-child(3) {
