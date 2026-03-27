@@ -482,6 +482,7 @@ input[type="checkbox"] {
   gap: 0;
   padding: 8px 8px 8px 14px;
   min-width: 0;
+  height: 44px;
 }
 
 .select-combo__label {
@@ -1531,7 +1532,19 @@ p.tp-rating-value {
 /* DESKTOP RESPONSIVE STYLE SECTION ----------------------------------------------*/
 
 @media (min-width: 1024px) {
+  .twinkling-tree-logo {
+    height: 50.4px;
+    width: 252px;
+  }
+
+  .logo-section {
+    gap: 45px;
+  }
+
+  .shipping-address-fields, 
+
   /* One grid row: each column stacks its own content (no shared row heights). */
+
   .checkout-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 550px);
