@@ -1331,7 +1331,7 @@ input[type="checkbox"] {
 }
 
 p.tp-rating-value {
-  font-size: 18px;
+  font-size: 18px !important;
   line-height: 22px;
   color: var(--color-black);
 }
@@ -1551,8 +1551,8 @@ p.tp-rating-value {
   }
 
   .customer-review-header-wrapper {
-    gap: 6px;
-    margin-top: 4px;
+    gap: 3px;
+    margin-top: 8px;
   }
 
   .customer-review-section {
