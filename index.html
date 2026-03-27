@@ -90,7 +90,7 @@
                     <p>$0.00</p>
                   </div>
                 </div>
-                <div class="total-amount-group">
+                <div class="amount-group">
                   <p>Total</p>
                   <div class="order-summary-total">
                     <p class="original-price">$159.98</p>
@@ -271,39 +271,41 @@
             <p class="section-titles">Shipping Address</p>
 
             <div class="shipping-address-fields">
-              <div class="field">
-                <input
-                  type="text"
-                  id="shipping-first-name"
-                  name="shipping-first-name"
-                  placeholder="First name"
-                  aria-required="true"
-                  aria-describedby="shipping-first-name-helper"
-                  required
-                />
-                <p
-                  id="shipping-first-name-helper"
-                  class="input-helper input-helper--on-invalid"
-                >
-                  First name is required
-                </p>
-              </div>
-              <div class="field">
-                <input
-                  type="text"
-                  id="shipping-last-name"
-                  name="shipping-last-name"
-                  placeholder="Last name"
-                  aria-required="true"
-                  aria-describedby="shipping-last-name-helper"
-                  required
-                />
-                <p
-                  id="shipping-last-name-helper"
-                  class="input-helper input-helper--on-invalid"
-                >
-                  Last name is required
-                </p>
+              <div class="address-fields-row address-fields-row--name">
+                <div class="field">
+                  <input
+                    type="text"
+                    id="shipping-first-name"
+                    name="shipping-first-name"
+                    placeholder="First name"
+                    aria-required="true"
+                    aria-describedby="shipping-first-name-helper"
+                    required
+                  />
+                  <p
+                    id="shipping-first-name-helper"
+                    class="input-helper input-helper--on-invalid"
+                  >
+                    First name is required
+                  </p>
+                </div>
+                <div class="field">
+                  <input
+                    type="text"
+                    id="shipping-last-name"
+                    name="shipping-last-name"
+                    placeholder="Last name"
+                    aria-required="true"
+                    aria-describedby="shipping-last-name-helper"
+                    required
+                  />
+                  <p
+                    id="shipping-last-name-helper"
+                    class="input-helper input-helper--on-invalid"
+                  >
+                    Last name is required
+                  </p>
+                </div>
               </div>
               <div class="field">
                 <div class="select-combo" data-custom-select>
@@ -403,115 +405,117 @@
                   aria-describedby="shipping-apt-suite-helper"
                 />
               </div>
-              <div class="field">
-                <input
-                  type="text"
-                  id="shipping-city"
-                  name="shipping-city"
-                  placeholder="City"
-                  aria-required="true"
-                  aria-describedby="shipping-city-helper"
-                  required
-                />
-                <p
-                  id="shipping-city-helper"
-                  class="input-helper input-helper--on-invalid"
-                >
-                  City is required
-                </p>
-              </div>
-              <div class="field">
-                <div class="select-combo" data-custom-select>
-                  <button
-                    type="button"
-                    class="select-combo__trigger"
-                    id="shipping-state-trigger"
-                    aria-haspopup="listbox"
-                    aria-expanded="false"
-                    aria-controls="shipping-state-listbox"
-                    aria-labelledby="shipping-state-label shipping-state-value"
-                    aria-describedby="shipping-state-helper"
-                  >
-                    <span class="select-combo__main">
-                      <span
-                        id="shipping-state-label"
-                        class="select-combo__label"
-                        >State</span
-                      >
-                      <span
-                        id="shipping-state-value"
-                        class="select-combo__value"
-                        data-select-display
-                        >Select state</span
-                      >
-                    </span>
-                    <span class="select-combo__suffix">
-                      <span
-                        class="select-combo__divider"
-                        aria-hidden="true"
-                      ></span>
-                      <svg
-                        class="icon-chevron-down select-combo__chevron"
-                        width="16"
-                        height="8"
-                        viewBox="0 0 10 5"
-                        aria-hidden="true"
-                        focusable="false"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polygon points="0,0 10,0 5,5" fill="#888888" />
-                      </svg>
-                    </span>
-                  </button>
-                  <div class="select-combo__dropdown" data-select-dropdown>
-                    <ul
-                      class="select-combo__list"
-                      role="listbox"
-                      id="shipping-state-listbox"
-                      tabindex="-1"
-                    ></ul>
-                  </div>
-                  <select
-                    id="shipping-state"
-                    name="shipping-state"
-                    class="select-combo__native-sr"
-                    tabindex="-1"
-                    aria-hidden="true"
+              <div class="address-fields-row address-fields-row--locality">
+                <div class="field">
+                  <input
+                    type="text"
+                    id="shipping-city"
+                    name="shipping-city"
+                    placeholder="City"
                     aria-required="true"
+                    aria-describedby="shipping-city-helper"
                     required
+                  />
+                  <p
+                    id="shipping-city-helper"
+                    class="input-helper input-helper--on-invalid"
                   >
-                    <option value="" selected disabled>Select state*</option>
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                  </select>
+                    City is required
+                  </p>
                 </div>
-                <p
-                  id="shipping-state-helper"
-                  class="input-helper input-helper--on-invalid"
-                >
-                  State is required
-                </p>
-              </div>
-              <div class="field">
-                <input
-                  type="text"
-                  id="shipping-zip-code"
-                  name="shipping-zip-code"
-                  placeholder="ZIP code"
-                  aria-required="true"
-                  aria-describedby="shipping-zip-code-helper"
-                  required
-                />
-                <p
-                  id="shipping-zip-code-helper"
-                  class="input-helper input-helper--on-invalid"
-                >
-                  Zip code is required
-                </p>
+                <div class="field">
+                  <div class="select-combo" data-custom-select>
+                    <button
+                      type="button"
+                      class="select-combo__trigger"
+                      id="shipping-state-trigger"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                      aria-controls="shipping-state-listbox"
+                      aria-labelledby="shipping-state-label shipping-state-value"
+                      aria-describedby="shipping-state-helper"
+                    >
+                      <span class="select-combo__main">
+                        <span
+                          id="shipping-state-label"
+                          class="select-combo__label"
+                          >State</span
+                        >
+                        <span
+                          id="shipping-state-value"
+                          class="select-combo__value"
+                          data-select-display
+                          >Select state</span
+                        >
+                      </span>
+                      <span class="select-combo__suffix">
+                        <span
+                          class="select-combo__divider"
+                          aria-hidden="true"
+                        ></span>
+                        <svg
+                          class="icon-chevron-down select-combo__chevron"
+                          width="16"
+                          height="8"
+                          viewBox="0 0 10 5"
+                          aria-hidden="true"
+                          focusable="false"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <polygon points="0,0 10,0 5,5" fill="#888888" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="select-combo__dropdown" data-select-dropdown>
+                      <ul
+                        class="select-combo__list"
+                        role="listbox"
+                        id="shipping-state-listbox"
+                        tabindex="-1"
+                      ></ul>
+                    </div>
+                    <select
+                      id="shipping-state"
+                      name="shipping-state"
+                      class="select-combo__native-sr"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      aria-required="true"
+                      required
+                    >
+                      <option value="" selected disabled>Select state</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                    </select>
+                  </div>
+                  <p
+                    id="shipping-state-helper"
+                    class="input-helper input-helper--on-invalid"
+                  >
+                    State is required
+                  </p>
+                </div>
+                <div class="field">
+                  <input
+                    type="text"
+                    id="shipping-zip-code"
+                    name="shipping-zip-code"
+                    placeholder="ZIP code"
+                    aria-required="true"
+                    aria-describedby="shipping-zip-code-helper"
+                    required
+                  />
+                  <p
+                    id="shipping-zip-code-helper"
+                    class="input-helper input-helper--on-invalid"
+                  >
+                    Zip code is required
+                  </p>
+                </div>
               </div>
 
               <div class="field field--with-icon">
@@ -580,27 +584,29 @@
                   aria-hidden="true"
                 >
                   <div class="shipping-address-fields">
-                    <div class="field">
-                      <input
-                        type="text"
-                        id="shipping-first-name"
-                        name="shipping-first-name"
-                        placeholder="First Name"
-                        aria-required="true"
-                        aria-describedby="shipping-first-name-helper"
-                        required
-                      />
-                    </div>
-                    <div class="field">
-                      <input
-                        type="text"
-                        id="shipping-last-name"
-                        name="shipping-last-name"
-                        placeholder="Last Name"
-                        aria-required="true"
-                        aria-describedby="shipping-last-name-helper"
-                        required
-                      />
+                    <div class="address-fields-row address-fields-row--name">
+                      <div class="field">
+                        <input
+                          type="text"
+                          id="shipping-first-name"
+                          name="shipping-first-name"
+                          placeholder="First Name"
+                          aria-required="true"
+                          aria-describedby="shipping-first-name-helper"
+                          required
+                        />
+                      </div>
+                      <div class="field">
+                        <input
+                          type="text"
+                          id="shipping-last-name"
+                          name="shipping-last-name"
+                          placeholder="Last Name"
+                          aria-required="true"
+                          aria-describedby="shipping-last-name-helper"
+                          required
+                        />
+                      </div>
                     </div>
                     <div class="field">
                       <div class="select-combo" data-custom-select>
@@ -692,99 +698,103 @@
                         aria-describedby="shipping-apt-suite-helper"
                       />
                     </div>
-                    <div class="field">
-                      <input
-                        type="text"
-                        id="shipping-city"
-                        name="shipping-city"
-                        placeholder="City"
-                        aria-required="true"
-                        aria-describedby="shipping-city-helper"
-                      />
-                    </div>
-                    <div class="field">
-                      <div class="select-combo" data-custom-select>
-                        <button
-                          type="button"
-                          class="select-combo__trigger"
-                          id="shipping-state-trigger"
-                          aria-haspopup="listbox"
-                          aria-expanded="false"
-                          aria-controls="shipping-state-listbox"
-                          aria-labelledby="shipping-state-label shipping-state-value"
-                        >
-                          <span class="select-combo__main">
-                            <span
-                              id="shipping-state-label"
-                              class="select-combo__label"
-                              >State</span
-                            >
-                            <span
-                              id="shipping-state-value"
-                              class="select-combo__value"
-                              data-select-display
-                              >Select state</span
-                            >
-                          </span>
-                          <span class="select-combo__suffix">
-                            <span
-                              class="select-combo__divider"
-                              aria-hidden="true"
-                            ></span>
-                            <svg
-                              class="icon-chevron-down select-combo__chevron"
-                              width="16"
-                              height="8"
-                              viewBox="0 0 10 5"
-                              aria-hidden="true"
-                              focusable="false"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <polygon points="0,0 10,0 5,5" fill="#888888" />
-                            </svg>
-                          </span>
-                        </button>
-                        <div
-                          class="select-combo__dropdown"
-                          data-select-dropdown
-                        >
-                          <ul
-                            class="select-combo__list"
-                            role="listbox"
-                            id="shipping-state-listbox"
-                            tabindex="-1"
-                          ></ul>
-                        </div>
-                        <select
-                          id="shipping-state"
-                          name="shipping-state"
-                          class="select-combo__native-sr"
-                          tabindex="-1"
-                          aria-hidden="true"
+                    <div
+                      class="address-fields-row address-fields-row--locality"
+                    >
+                      <div class="field">
+                        <input
+                          type="text"
+                          id="shipping-city"
+                          name="shipping-city"
+                          placeholder="City"
                           aria-required="true"
-                          required
-                        >
-                          <option value="" selected disabled>
-                            Select state*
-                          </option>
-                          <option value="AL">Alabama</option>
-                          <option value="AK">Alaska</option>
-                          <option value="AZ">Arizona</option>
-                          <option value="AR">Arkansas</option>
-                          <option value="CA">California</option>
-                          <option value="CO">Colorado</option>
-                        </select>
+                          aria-describedby="shipping-city-helper"
+                        />
                       </div>
-                    </div>
-                    <div class="field">
-                      <input
-                        type=""
-                        id="shipping-zip-code"
-                        name="shipping-zip-code"
-                        placeholder="Zip Code"
-                        aria-required="true"
-                        aria-describedby="shipping-zip-code-helper"
-                      />
+                      <div class="field">
+                        <div class="select-combo" data-custom-select>
+                          <button
+                            type="button"
+                            class="select-combo__trigger"
+                            id="shipping-state-trigger"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="shipping-state-listbox"
+                            aria-labelledby="shipping-state-label shipping-state-value"
+                          >
+                            <span class="select-combo__main">
+                              <span
+                                id="shipping-state-label"
+                                class="select-combo__label"
+                                >State</span
+                              >
+                              <span
+                                id="shipping-state-value"
+                                class="select-combo__value"
+                                data-select-display
+                                >Select state</span
+                              >
+                            </span>
+                            <span class="select-combo__suffix">
+                              <span
+                                class="select-combo__divider"
+                                aria-hidden="true"
+                              ></span>
+                              <svg
+                                class="icon-chevron-down select-combo__chevron"
+                                width="16"
+                                height="8"
+                                viewBox="0 0 10 5"
+                                aria-hidden="true"
+                                focusable="false"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polygon points="0,0 10,0 5,5" fill="#888888" />
+                              </svg>
+                            </span>
+                          </button>
+                          <div
+                            class="select-combo__dropdown"
+                            data-select-dropdown
+                          >
+                            <ul
+                              class="select-combo__list"
+                              role="listbox"
+                              id="shipping-state-listbox"
+                              tabindex="-1"
+                            ></ul>
+                          </div>
+                          <select
+                            id="shipping-state"
+                            name="shipping-state"
+                            class="select-combo__native-sr"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            aria-required="true"
+                            required
+                          >
+                            <option value="" selected disabled>
+                              Select state
+                            </option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <input
+                          type=""
+                          id="shipping-zip-code"
+                          name="shipping-zip-code"
+                          placeholder="Zip Code"
+                          aria-required="true"
+                          aria-describedby="shipping-zip-code-helper"
+                        />
+                      </div>
                     </div>
 
                     <div class="field field--with-icon">
