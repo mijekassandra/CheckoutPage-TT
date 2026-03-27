@@ -1546,6 +1546,14 @@ p.tp-rating-value {
     padding: 22px 0;
   }
 
+  .discount-code-section {
+    gap: 20px;
+  }
+
+  .customer-review-section {
+    padding: 0;
+  }
+
   /* One grid row: each column stacks its own content (no shared row heights). */
   .checkout-layout {
     display: grid;
