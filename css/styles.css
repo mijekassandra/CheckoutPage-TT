@@ -1580,6 +1580,10 @@ p.tp-rating-value {
     margin-bottom: 8px;
   }
 
+  .order-item-details {
+    gap: 30px;
+  }
+
   /* One grid row: each column stacks its own content (no shared row heights). */
   .checkout-layout {
     display: grid;
@@ -1633,6 +1637,7 @@ p.tp-rating-value {
   .order-summary-title {
     display: block;
     margin-bottom: 13px;
+    font-size: 20px;
   }
 
   .customer-review-section h4 {
