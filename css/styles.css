@@ -1542,14 +1542,11 @@ p.tp-rating-value {
     gap: 45px;
   }
 
-  .order-summary-title {
-    margin-top: 6px;
+  .express-checkout-section {
+    padding: 22px 0;
   }
 
-  .shipping-address-fields, 
-
   /* One grid row: each column stacks its own content (no shared row heights). */
-
   .checkout-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 550px);
