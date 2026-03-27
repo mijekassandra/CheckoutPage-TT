@@ -1550,8 +1550,21 @@ p.tp-rating-value {
     gap: 20px;
   }
 
+  .customer-review-header-wrapper {
+    gap: 6px;
+    margin-top: 4px;
+  }
+
   .customer-review-section {
     padding: 0;
+  }
+
+  .customer-review-card {
+    gap: 8px;
+  }
+
+  .customer-review-card-header {
+    margin-bottom: 8px;
   }
 
   /* One grid row: each column stacks its own content (no shared row heights). */
