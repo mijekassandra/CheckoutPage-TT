@@ -981,6 +981,39 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+.contact-news-offers {
+  display: none;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .contact-news-offers {
+    display: flex;
+  }
+}
+
+.contact-news-offers input {
+  width: 17px;
+  height: 17px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.contact-news-offers label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--color-dark-grey);
+  margin: 0;
+}
+
 /* SHIPPING ADDRESS STYLES SECTION ----------------------------------------------*/
 .shipping-address-section {
   display: flex;
