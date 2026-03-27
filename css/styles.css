@@ -307,6 +307,7 @@ input[type="checkbox"] {
   font-size: 17px;
   font-weight: bold;
   color: var(--color-black);
+  line-height: 28px;
 }
 
 .section-subtitles {
@@ -1539,6 +1540,10 @@ p.tp-rating-value {
 
   .logo-section {
     gap: 45px;
+  }
+
+  .order-summary-title {
+    margin-top: 6px;
   }
 
   .shipping-address-fields, 
