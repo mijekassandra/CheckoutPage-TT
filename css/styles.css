@@ -290,7 +290,7 @@ input[type="checkbox"] {
 .checkout-layout__form-top {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 50px;
   width: 100%;
 }
 
