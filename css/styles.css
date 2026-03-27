@@ -369,7 +369,7 @@ input[type="checkbox"] {
 .field {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 5px;
 }
 
 .input-helper {
@@ -377,6 +377,7 @@ input[type="checkbox"] {
   font-weight: 700;
   line-height: 20px;
   color: var(--color-red-error);
+  margin-left: 5px;
 }
 
 .input-helper--error {
@@ -743,7 +744,7 @@ input[type="checkbox"] {
 .order-summary-menu {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .order-summary-menu p {
@@ -770,7 +771,7 @@ input[type="checkbox"] {
 
 .order-summary-total {
   display: flex;
-  gap: 13px;
+  gap: 14x;
 }
 
 .order-summary-total .discounted-price {
@@ -845,7 +846,7 @@ input[type="checkbox"] {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(35%, -35%);
+  transform: translate(60%, -35%);
   width: 26px;
   height: 26px;
   background-color: var(--color-dark-grey);
