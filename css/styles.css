@@ -1616,6 +1616,12 @@ p.tp-rating-value {
     gap: 30px;
   }
 
+  .shipping-address-fields,
+  .billing-address-fields,
+  .payment-details-container {
+    gap: 16px;
+  }
+
   /* One grid row: each column stacks its own content (no shared row heights). */
   .checkout-layout {
     display: grid;
