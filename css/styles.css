@@ -279,7 +279,7 @@ input[type="checkbox"] {
     order: 5;
     padding-left: 17px;
     padding-right: 17px;
-    margin-top: 30px;
+    margin-top: 44px;
   }
 
   /* Last in column on mobile; lives in main column on desktop */
@@ -1350,7 +1350,7 @@ input[type="checkbox"] {
 .customer-review-header-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   max-width: 330px;
   margin: 0 auto;
 }
@@ -1638,6 +1638,10 @@ p.tp-rating-value {
 
   .discount-code-section {
     gap: 20px;
+  }
+
+  .billing-radio-option {
+    padding: 14px 14px;
   }
 
   .billing-address-section,
