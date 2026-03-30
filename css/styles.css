@@ -797,7 +797,7 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 19px;
   background-color: var(--color-grey);
-  padding: 22px 17px 20px 17px;
+  padding: 22px 17px 19px 17px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -896,7 +896,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 37px;
+  gap: 36px;
   margin-bottom: 36px;
 }
 
