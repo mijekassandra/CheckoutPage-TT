@@ -959,7 +959,7 @@ input[type="checkbox"] {
 }
 
 .payment-icon {
-  height: 24px;
+  height: 20px;
 }
 
 .payment-link-btn:nth-child(3) {
@@ -1604,6 +1604,14 @@ p.tp-rating-value {
 
   .express-checkout-section {
     padding: 22px 0;
+  }
+
+  .express-checkout-cc {
+    font-weight: 400;
+  }
+
+  .section-titles {
+    font-size: 20px;
   }
 
   .discount-code-section {
