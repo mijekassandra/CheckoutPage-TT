@@ -1811,7 +1811,7 @@ p.tp-rating-value {
 
   .order-summary-container {
     border: none;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 0 0;
     gap: 16px;
   }
 
