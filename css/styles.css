@@ -1767,7 +1767,7 @@ p.tp-rating-value {
   /* One grid row: each column stacks its own content (no shared row heights). */
   .checkout-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 570px);
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 550px);
     grid-template-rows: auto;
     align-items: start;
   }
