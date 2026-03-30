@@ -1593,6 +1593,17 @@ p.tp-rating-value {
 /* DESKTOP RESPONSIVE STYLE SECTION ----------------------------------------------*/
 
 @media (min-width: 1024px) {
+  input,
+  .select-combo__trigger,
+  .select-combo__main {
+    min-height: 48px;
+  }
+
+  .discount-code-fields input,
+  .discount-code-fields .btn-primary {
+    height: 50px;
+  }
+
   .twinkling-tree-logo {
     height: 50.4px;
     width: 252px;
