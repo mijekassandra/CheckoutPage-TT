@@ -246,6 +246,10 @@ input[type="checkbox"] {
     display: contents;
   }
 
+  .billing-address-section {
+    margin-top: 14px;
+  }
+
   .order-summary {
     order: 1;
   }
@@ -266,7 +270,7 @@ input[type="checkbox"] {
     order: 3;
     padding-left: 17px;
     padding-right: 17px;
-    margin-block: 32px;
+    margin-block: 34px;
   }
 
   .checkout-layout__payment {
@@ -279,7 +283,7 @@ input[type="checkbox"] {
     order: 5;
     padding-left: 17px;
     padding-right: 17px;
-    margin-top: 44px;
+    margin-top: 38px;
   }
 
   /* Last in column on mobile; lives in main column on desktop */
@@ -791,7 +795,7 @@ input[type="checkbox"] {
 .order-summary-container {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 19px;
   background-color: var(--color-grey);
   padding: 22px 17px 20px 17px;
   border-top: 1px solid #d9d9d9;
@@ -892,7 +896,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 36px;
+  gap: 37px;
   margin-bottom: 36px;
 }
 
@@ -917,7 +921,7 @@ input[type="checkbox"] {
 
 .express-checkout-cc {
   position: absolute;
-  bottom: -35px;
+  bottom: -33px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -1183,7 +1187,7 @@ input[type="checkbox"] {
 .payment-info-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
 }
 
 .payment-info-header {
@@ -1274,7 +1278,7 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 8px;
   background-color: var(--color-grey);
-  padding: 20px 14px;
+  padding: 18px 14px;
 }
 
 .payment-details-container.payment-details-container--hidden {
@@ -1285,12 +1289,12 @@ input[type="checkbox"] {
 .payment-details-exp-cvv-row {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .payment-discount-wrapper {
   display: grid;
-  gap: 8px;
+  gap: 0px;
 }
 
 .checkbox-discount-container {
@@ -1322,7 +1326,7 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 12px 16px; */
+  padding: 8px 16px;
 }
 
 .payment-complete-order-btn {
@@ -1342,7 +1346,7 @@ input[type="checkbox"] {
 .customer-review-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   background-color: var(--color-grey);
   padding: 14px 17px;
 }
@@ -1358,7 +1362,7 @@ input[type="checkbox"] {
 .customer-review-header-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   max-width: 330px;
   margin: 0 auto;
 }
