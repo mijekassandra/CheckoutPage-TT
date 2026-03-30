@@ -1648,9 +1648,11 @@ p.tp-rating-value {
     gap: 16px;
   }
 
-  .contact-info-section,
-  .shipping-address-section {
+  .contact-info-section {
     gap: 13px;
+  }
+  .shipping-address-section {
+    gap: 14px;
   }
 
   .express-checkout-cc {
@@ -1683,7 +1685,7 @@ p.tp-rating-value {
 
   .customer-review-header-wrapper {
     gap: 3px;
-    margin-top: 8px;
+    margin-top: 14px;
   }
 
   .billing-address-container {
@@ -1692,6 +1694,7 @@ p.tp-rating-value {
 
   .customer-review-section {
     padding: 0;
+    gap: 14px;
   }
 
   .customer-review-card {
@@ -1707,9 +1710,12 @@ p.tp-rating-value {
   }
 
   .shipping-address-fields,
-  .billing-address-fields,
-  .payment-details-container {
+  .billing-address-fields {
     gap: 15px;
+  }
+
+  .payment-details-container {
+    padding: 17px 14px;
   }
 
   .payment-details-exp-cvv-row {
@@ -1729,10 +1735,29 @@ p.tp-rating-value {
 
   .payment-complete-order-btn-wrapper {
     padding: 8px;
+    margin-top: 25px;
   }
 
   .payment-radio-option {
     padding: 14px;
+  }
+
+  .payment-radio-option:last-child {
+    padding: 14px;
+  }
+
+  .checkbox-discount-container input {
+    width: 17px;
+    height: 17px;
+  }
+
+  .payment-discount-wrapper {
+    gap: 4px;
+  }
+
+  .payment-discount-wrapper p {
+    font-weight: 300;
+    font-size: 12px;
   }
 
   /* One grid row: each column stacks its own content (no shared row heights). */
@@ -1782,7 +1807,8 @@ p.tp-rating-value {
 
   .order-summary-container {
     border: none;
-    padding-block: 10px 0;
+    padding: 10px 0 10px 0;
+    gap: 16px;
   }
 
   .order-summary-title {
