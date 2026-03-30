@@ -1606,6 +1606,11 @@ p.tp-rating-value {
     padding: 22px 0;
   }
 
+  .contact-info-section,
+  .shipping-address-section {
+    gap: 16px;
+  }
+
   .express-checkout-cc {
     font-weight: 400;
   }
