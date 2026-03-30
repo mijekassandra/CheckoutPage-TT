@@ -314,7 +314,7 @@ input[type="checkbox"] {
 .section-subtitles {
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 .link-text {
@@ -1061,7 +1061,6 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  /* margin-top: 22px; */
 }
 
 .shipping-method-section {
@@ -1181,6 +1180,12 @@ input[type="checkbox"] {
 /* PAYMENT INFO STYLES SECTION ----------------------------------------------*/
 
 .payment-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.payment-info-header {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1597,6 +1602,7 @@ p.tp-rating-value {
   .select-combo__trigger,
   .select-combo__main {
     min-height: 48px;
+    font-size: 15px;
   }
 
   .discount-code-fields input,
@@ -1632,6 +1638,11 @@ p.tp-rating-value {
 
   .discount-code-section {
     gap: 20px;
+  }
+
+  .billing-address-section,
+  .shipping-method-section {
+    gap: 16px;
   }
 
   .customer-review-header-wrapper {
