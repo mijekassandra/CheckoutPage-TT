@@ -987,6 +987,7 @@ input[type="checkbox"] {
   align-self: flex-start;
   gap: 8px;
   width: fit-content;
+  margin-top: 5px;
 }
 
 @media (min-width: 768px) {
@@ -1278,6 +1279,13 @@ input[type="checkbox"] {
 
 .payment-details-container.payment-details-container--hidden {
   display: none;
+}
+
+/* Expiration + CVV: stacked on mobile, one row on desktop */
+.payment-details-exp-cvv-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .payment-discount-wrapper {
@@ -1616,20 +1624,41 @@ p.tp-rating-value {
   }
 
   .logo-section {
-    gap: 45px;
+    gap: 46px;
   }
 
   .express-checkout-section {
     padding: 22px 0;
   }
 
+  .order-item-container {
+    margin-bottom: 8px;
+  }
+
+  .order-tax-group {
+    gap: 18px;
+  }
+
+  .payment-info-header {
+    margin-top: 16px;
+    gap: 5px;
+  }
+
+  .payment-info-section {
+    gap: 16px;
+  }
+
   .contact-info-section,
   .shipping-address-section {
-    gap: 16px;
+    gap: 13px;
   }
 
   .express-checkout-cc {
     font-weight: 400;
+  }
+
+  .express-checkout-section {
+    gap: 16px;
   }
 
   .section-titles {
@@ -1641,10 +1670,13 @@ p.tp-rating-value {
   }
 
   .billing-radio-option {
-    padding: 14px 14px;
+    padding: 15px 14px;
   }
 
-  .billing-address-section,
+  .billing-address-section {
+    gap: 17px;
+  }
+
   .shipping-method-section {
     gap: 16px;
   }
@@ -1652,6 +1684,10 @@ p.tp-rating-value {
   .customer-review-header-wrapper {
     gap: 3px;
     margin-top: 8px;
+  }
+
+  .billing-address-container {
+    padding: 18px 14px;
   }
 
   .customer-review-section {
@@ -1673,7 +1709,18 @@ p.tp-rating-value {
   .shipping-address-fields,
   .billing-address-fields,
   .payment-details-container {
-    gap: 16px;
+    gap: 15px;
+  }
+
+  .payment-details-exp-cvv-row {
+    flex-direction: row;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .payment-details-exp-cvv-row > .field {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .shipping-address-section-title {
@@ -1684,10 +1731,14 @@ p.tp-rating-value {
     padding: 8px;
   }
 
+  .payment-radio-option {
+    padding: 14px;
+  }
+
   /* One grid row: each column stacks its own content (no shared row heights). */
   .checkout-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 550px);
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 570px);
     grid-template-rows: auto;
     align-items: start;
   }
@@ -1731,7 +1782,7 @@ p.tp-rating-value {
 
   .order-summary-container {
     border: none;
-    padding: 10px 0;
+    padding-block: 10px 0;
   }
 
   .order-summary-title {
