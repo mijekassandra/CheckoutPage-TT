@@ -1800,6 +1800,7 @@ p.tp-rating-value {
   }
 
   .payment-details-container {
+    gap: 15px;
     padding: 17px 14px;
   }
 
@@ -1821,7 +1822,7 @@ p.tp-rating-value {
 
   .payment-complete-order-btn-wrapper {
     padding: 8px;
-    margin-top: 25px;
+    margin-top: 16px;
   }
 
   .payment-radio-option {
@@ -1830,6 +1831,10 @@ p.tp-rating-value {
 
   .payment-radio-option:last-child {
     padding: 14px;
+  }
+
+  .checkbox-discount-container {
+    margin-top: 4px;
   }
 
   .checkbox-discount-container input {
@@ -1915,6 +1920,6 @@ p.tp-rating-value {
   .checkout-layout__footer {
     border-top: 1px solid #d9d9d9;
     padding-top: 22px;
-    margin-top: 20px;
+    margin-top: 12px;
   }
 }
