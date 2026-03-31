@@ -262,6 +262,10 @@ input[type="checkbox"] {
     display: none;
   }
 
+  .payment-type-container {
+    margin-top: 4px;
+  }
+
   .checkout-layout__form-top {
     order: 2;
     padding-left: 17px;
@@ -299,14 +303,14 @@ input[type="checkbox"] {
   .discount-code-section {
     display: flex;
     flex-direction: column;
-    gap: 18px;
   }
 
   .shipping-method-section .section-titles {
     line-height: 32px;
   }
 
-  .discount-code-section .section-titles {
+  .discount-code-section .section-titles,
+  .payment-info-header .section-titles {
     line-height: 35px;
   }
 }
@@ -1181,7 +1185,7 @@ input[type="checkbox"] {
 .discount-code-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
 }
 
 .discount-code-fields {
@@ -1217,13 +1221,13 @@ input[type="checkbox"] {
 .payment-info-section {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
 }
 
 .payment-info-header {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .payment-type-container {
@@ -1306,7 +1310,7 @@ input[type="checkbox"] {
 .payment-details-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   background-color: var(--color-grey);
   padding: 18px 14px;
 }
