@@ -1655,6 +1655,12 @@ p.tp-rating-value {
   .contact-info-section {
     gap: 13px;
   }
+
+  .contact-info-section .section-titles {
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
   .shipping-address-section {
     gap: 14px;
   }
@@ -1674,7 +1680,8 @@ p.tp-rating-value {
   }
 
   .discount-code-section {
-    gap: 20px;
+    gap: 16px;
+    max-width: 6px;
   }
 
   .billing-radio-option {
