@@ -263,7 +263,7 @@ input[type="checkbox"] {
   }
 
   .total-container {
-    margin-block: 18px 1px;
+    margin-block: 4px 1px;
   }
 
   .order- .payment-type-container {
@@ -1541,6 +1541,13 @@ p.tp-rating-value {
   box-shadow: 0 3px 26px 0 rgba(0, 0, 0, 0.08);
 }
 
+.customer-review-card:nth-child(2) {
+  min-height: 237px;
+}
+.customer-review-card:nth-child(3) {
+  min-height: 189px;
+}
+
 .customer-review-card-header {
   display: flex;
   gap: 18px;
@@ -1770,6 +1777,10 @@ p.tp-rating-value {
 
   .customer-review-card-header {
     margin-bottom: 8px;
+  }
+
+  .customer-review-card:nth-child(2) .customer-review-card-text {
+    margin-top: 21px;
   }
 
   .order-item-details {
