@@ -1375,7 +1375,7 @@ input[type="checkbox"] {
 }
 
 .payment-discount-wrapper p {
-  font-size: 1px;
+  font-size: 13px;
   line-height: 22px;
   color: var(--color-black);
 }
@@ -1692,6 +1692,14 @@ p.tp-rating-value {
 
   .logo-section {
     gap: 46px;
+  }
+
+  .payment-link-btn {
+    width: 208px;
+  }
+
+  .payment-complete-order-btn-wrapper {
+    margin-top: 22px;
   }
 
   .express-checkout-section {
