@@ -1108,7 +1108,7 @@ input[type="checkbox"] {
 @media (min-width: 769px) {
   .shipping-address-fields .address-fields-row {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
   }
 
@@ -1646,7 +1646,7 @@ p.tp-rating-value {
   input,
   .select-combo__trigger,
   .select-combo__main {
-    min-height: 44px;
+    min-height: 48px;
     font-size: 15px;
   }
 
