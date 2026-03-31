@@ -799,7 +799,7 @@ input[type="checkbox"] {
 
 .order-summary-total {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 }
 
 .order-summary-total .discounted-price {
@@ -1678,8 +1678,13 @@ p.tp-rating-value {
     margin-bottom: 0 !important;
   }
 
+  .order-summary-total {
+    margin-right: 4px;
+  }
+
   .order-tax-group {
     gap: 18px;
+    margin-right: 4px;
   }
 
   .payment-info-header {
