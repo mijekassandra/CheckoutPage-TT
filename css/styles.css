@@ -294,6 +294,21 @@ input[type="checkbox"] {
   .checkout-layout__footer {
     order: 6;
   }
+
+  .shipping-method-section,
+  .discount-code-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .shipping-method-section .section-titles {
+    line-height: 32px;
+  }
+
+  .discount-code-section .section-titles {
+    line-height: 35px;
+  }
 }
 
 .checkout-layout__form-top {
@@ -1069,21 +1084,6 @@ input[type="checkbox"] {
   .shipping-address-fields .address-fields-row .field {
     flex: 1 1 0;
     min-width: 0;
-  }
-
-  .shipping-method-section,
-  .discount-code-section {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .shipping-method-section .section-titles {
-    line-height: 32px;
-  }
-
-  .discount-code-section .section-titles {
-    line-height: 35px;
   }
 }
 
