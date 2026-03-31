@@ -1070,6 +1070,21 @@ input[type="checkbox"] {
     flex: 1 1 0;
     min-width: 0;
   }
+
+  .shipping-method-section,
+  .discount-code-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .shipping-method-section .section-titles {
+    line-height: 32px;
+  }
+
+  .discount-code-section .section-titles {
+    line-height: 35px;
+  }
 }
 
 /* BILLING ADDRESS + SHIPPING METHOD STYLES SECTION ----------------------------------------------*/
@@ -1084,9 +1099,6 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.shipping-method-section {
   margin-top: 0 !important;
 }
 
