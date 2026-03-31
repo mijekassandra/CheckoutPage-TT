@@ -802,6 +802,13 @@ input[type="checkbox"] {
   border-bottom: 1px solid #d9d9d9;
 }
 
+.order-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-block: 2px 1px;
+}
+
 .order-item-wrapper {
   display: flex;
   flex-direction: column;
@@ -1597,6 +1604,11 @@ p.tp-rating-value {
     padding: 10px 0;
   }
 
+  .order-group-container {
+    gap: 27px;
+    margin-block: 0px;
+  }
+
   .order-summary-title {
     display: block;
     margin-bottom: 13px;
@@ -1681,7 +1693,7 @@ p.tp-rating-value {
 
   .discount-code-section {
     gap: 16px;
-    max-width: 6px;
+    max-width: 100%;
   }
 
   .billing-radio-option {
@@ -1822,6 +1834,11 @@ p.tp-rating-value {
     border: none;
     padding: 12px 0 0 0;
     gap: 19px;
+  }
+
+  .order-group-container {
+    gap: 27px;
+    margin-block: 0px;
   }
 
   .order-summary-title {
