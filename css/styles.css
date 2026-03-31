@@ -1035,6 +1035,7 @@ input[type="checkbox"] {
 
 .shipping-address-section-title {
   margin-top: 6px;
+  margin-bottom: 2px;
 }
 
 .shipping-address-fields {
@@ -1648,7 +1649,7 @@ p.tp-rating-value {
   }
 
   .order-item-container {
-    margin-bottom: 8px;
+    margin-bottom: 0 !important;
   }
 
   .order-tax-group {
@@ -1692,7 +1693,7 @@ p.tp-rating-value {
   }
 
   .discount-code-section {
-    gap: 16px;
+    gap: 18px;
     max-width: 100%;
   }
 
