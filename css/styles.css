@@ -1646,7 +1646,7 @@ p.tp-rating-value {
   input,
   .select-combo__trigger,
   .select-combo__main {
-    min-height: 48px;
+    min-height: 44px;
     font-size: 15px;
   }
 
