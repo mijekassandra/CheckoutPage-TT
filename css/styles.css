@@ -1660,7 +1660,9 @@ p.tp-rating-value {
   }
 
   .express-checkout-cc {
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 14px;
+    bottom: -35px;
   }
 
   .express-checkout-section {
@@ -1811,8 +1813,8 @@ p.tp-rating-value {
 
   .order-summary-container {
     border: none;
-    padding: 10px 0 0 0;
-    gap: 16px;
+    padding: 12px 0 0 0;
+    gap: 19px;
   }
 
   .order-summary-title {
