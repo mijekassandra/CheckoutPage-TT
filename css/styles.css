@@ -254,6 +254,13 @@ input[type="checkbox"] {
     line-height: 30px;
   }
 
+  .customer-review-card:nth-child(2) {
+    min-height: 237px;
+  }
+  .customer-review-card:nth-child(3) {
+    min-height: 189px;
+  }
+
   .order-summary {
     order: 1;
   }
@@ -316,6 +323,9 @@ input[type="checkbox"] {
   .discount-code-section .section-titles,
   .payment-info-header .section-titles {
     line-height: 35px;
+  }
+  .footer-text-wrapper {
+    padding: 26px;
   }
 }
 
@@ -1539,13 +1549,6 @@ p.tp-rating-value {
   padding: 14px;
   border-radius: 8px;
   box-shadow: 0 3px 26px 0 rgba(0, 0, 0, 0.08);
-}
-
-.customer-review-card:nth-child(2) {
-  min-height: 237px;
-}
-.customer-review-card:nth-child(3) {
-  min-height: 189px;
 }
 
 .customer-review-card-header {
