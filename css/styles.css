@@ -227,11 +227,14 @@ input[type="checkbox"] {
 
 .checkout-layout {
   width: 100%;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Mobile: flatten sidebar + main column so visual order stays
    order-summary → form → discount → payment → reviews */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .checkout-layout {
     display: flex;
     flex-direction: column;
@@ -1050,7 +1053,7 @@ input[type="checkbox"] {
   margin-top: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .contact-news-offers {
     display: flex;
   }
@@ -1102,7 +1105,7 @@ input[type="checkbox"] {
   gap: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .shipping-address-fields .address-fields-row {
     flex-direction: row;
     align-items: flex-start;
@@ -1310,7 +1313,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .credit-card-option-label__title--desktop-only {
     display: inline;
   }
@@ -1557,13 +1560,19 @@ p.tp-rating-value {
 
 .customer-review-card-header {
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px 18px;
 }
 
 .customer-review-card-header p {
   font-size: 13px;
   line-height: 22px;
   color: var(--color-black);
+  text-align: left;
+  flex: 0 1 auto;
+  margin: 0;
 }
 
 .customer-review-card-header b {
@@ -1574,6 +1583,8 @@ p.tp-rating-value {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex: 0 0 auto;
+  padding: 2px 0;
 }
 
 .verified-buyer-badge img {
@@ -1595,6 +1606,30 @@ p.tp-rating-value {
   text-align: left !important;
 }
 
+/* Narrow desktop sidebar only: `container-type` is set on `.customer-review-card`
+   inside `@media (min-width: 769px)` — mobile cards are unchanged. */
+@container (max-width: 340px) {
+  .customer-review-card-header {
+    align-items: flex-start;
+  }
+
+  .customer-review-card-header > p {
+    min-width: 0;
+  }
+
+  .verified-buyer-badge p {
+    white-space: nowrap;
+    line-height: 1.25;
+  }
+}
+
+@container (max-width: 280px) {
+  .customer-review-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* RESPONSIVE STYLE SECTION ----------------------------------------------*/
 @media (min-width: 480px) {
   .express-checkout-section {
@@ -1605,74 +1640,9 @@ p.tp-rating-value {
   }
 }
 
-/* TABLET: same two-column layout as desktop, tighter padding */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .checkout-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(240px, 400px);
-    grid-template-rows: auto;
-    align-items: start;
-  }
+/* DESKTOP LAYOUT: two-column from 769px up (mobile is 768px and below) */
 
-  .checkout-layout .main-container {
-    /* Same fluid padding as desktop; max 50px / 130px; scales with viewport */
-    padding: clamp(24px, calc(100vw * 50 / 1300), 50px)
-      clamp(24px, calc(100vw * 130 / 1300), 130px);
-  }
-
-  .checkout-layout__main-column {
-    grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .checkout-layout__sidebar {
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    background-color: var(--color-grey);
-    padding: 72px 40px;
-    height: 100%;
-  }
-
-  .order-summary-panel.order-summary-panel--collapsed {
-    grid-template-rows: 1fr;
-  }
-
-  .order-summary-section .chevron-up-down-icon {
-    display: none;
-  }
-  .order-summary-section {
-    display: none;
-  }
-
-  .order-summary-container {
-    border: none;
-    padding: 10px 0;
-  }
-
-  .order-group-container {
-    gap: 27px;
-    margin-block: 0px;
-  }
-
-  .order-summary-title {
-    display: block;
-    margin-bottom: 13px;
-  }
-
-  .customer-review-section h4 {
-    display: none;
-  }
-}
-
-/* DESKTOP RESPONSIVE STYLE SECTION ----------------------------------------------*/
-
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   input,
   .select-combo__trigger,
   .select-combo__main {
@@ -1749,6 +1719,7 @@ p.tp-rating-value {
 
   .express-checkout-section {
     gap: 16px;
+    padding-inline: 20px;
   }
 
   .section-titles {
@@ -1787,6 +1758,7 @@ p.tp-rating-value {
   }
 
   .customer-review-card {
+    container-type: inline-size;
     gap: 8px;
   }
 
@@ -1858,18 +1830,13 @@ p.tp-rating-value {
     font-size: 12px;
   }
 
-  /* One grid row: each column stacks its own content (no shared row heights). */
+  /* One grid row: each column stacks its own content (no shared row heights).
+     Aside width scales with viewport (capped 550px) so both columns narrow together. */
   .checkout-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 550px);
+    grid-template-columns: minmax(0, 1fr) clamp(240px, 40vw, 550px);
     grid-template-rows: auto;
     align-items: start;
-  }
-
-  .checkout-layout .main-container {
-    /* Max 50px / 130px; scales down below ~1300px viewport */
-    padding: clamp(24px, calc(100vw * 50 / 1300), 50px)
-      clamp(24px, calc(100vw * 130 / 1300), 115px);
   }
 
   .checkout-layout__main-column {
@@ -1886,8 +1853,8 @@ p.tp-rating-value {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    min-width: 0;
     background-color: var(--color-grey);
-    padding: 130px 50px;
     height: 100%;
   }
 
@@ -1928,5 +1895,42 @@ p.tp-rating-value {
     border-top: 1px solid #d9d9d9;
     padding-top: 22px;
     margin-top: 12px;
+  }
+}
+
+/* Narrow desktop: tighter fixed padding (769–1023). Mobile ≤768 unchanged. */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .checkout-layout .main-container {
+    padding: 50px 28px;
+  }
+
+  .checkout-layout__sidebar {
+    padding: 130px 18px;
+  }
+
+  .order-item-details {
+    gap: 16px;
+  }
+}
+
+/* Desktop 1024+: fluid padding; horizontal edges align with 769–1023 (28px / 18px)
+   at 1024px, then ramp to max at 1366px. */
+@media (min-width: 1024px) {
+  .checkout-layout .main-container {
+    padding: clamp(24px, calc(min(100vw, 1366px) * 50 / 1366), 50px)
+      clamp(
+        28px,
+        calc(28px + (115 - 28) * (min(100vw, 1366px) - 1024px) / (1366 - 1024)),
+        115px
+      );
+  }
+
+  .checkout-layout__sidebar {
+    padding: clamp(80px, calc(min(100vw, 1366px) * 130 / 1366), 130px)
+      clamp(
+        18px,
+        calc(18px + (50 - 18) * (min(100vw, 1366px) - 1024px) / (1366 - 1024)),
+        50px
+      );
   }
 }

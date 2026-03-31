@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const orderSummaryToggle = document.getElementById("order-summary-toggle");
   const orderSummaryPanel = document.getElementById("order-summary-panel");
   if (orderSummaryToggle && orderSummaryPanel) {
-    const orderSummaryDesktopMq = window.matchMedia("(min-width: 768px)");
+    const orderSummaryDesktopMq = window.matchMedia("(min-width: 769px)");
 
     const syncOrderSummaryDesktop = () => {
       if (!orderSummaryDesktopMq.matches) return;
