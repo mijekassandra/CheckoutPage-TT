@@ -1694,6 +1694,14 @@ p.tp-rating-value {
     gap: 46px;
   }
 
+  .payment-link-btn {
+    width: 208px;
+  }
+
+  .payment-complete-order-btn-wrapper {
+    margin-top: 22px;
+  }
+
   .express-checkout-section {
     padding: 22px 0;
   }
