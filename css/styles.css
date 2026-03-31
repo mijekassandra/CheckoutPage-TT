@@ -242,10 +242,6 @@ input[type="checkbox"] {
     display: contents;
   }
 
-  .payment-type-container {
-    margin-top: 4px;
-  }
-
   .checkout-layout .checkout-layout__main-column.main-container {
     display: contents;
   }
@@ -266,7 +262,7 @@ input[type="checkbox"] {
   }
 
   .payment-complete-order-btn-wrapper {
-    padding: 10px 16px;
+    padding: 3px 16px;
   }
 
   .order-summary {
@@ -1249,7 +1245,7 @@ input[type="checkbox"] {
 .payment-info-section {
   display: flex;
   flex-direction: column;
-  gap: 204px;
+  gap: 24px;
 }
 
 .payment-info-header {
@@ -1379,7 +1375,7 @@ input[type="checkbox"] {
 }
 
 .payment-discount-wrapper p {
-  font-size: 12px;
+  font-size: 1px;
   line-height: 22px;
   color: var(--color-black);
 }
@@ -1826,11 +1822,6 @@ p.tp-rating-value {
   .shipping-address-section-title {
     margin-top: 0;
     margin-bottom: 2px;
-  }
-
-  .payment-complete-order-btn-wrapper {
-    padding: 8px;
-    margin-top: 16px;
   }
 
   .payment-radio-option {
