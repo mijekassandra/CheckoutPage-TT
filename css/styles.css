@@ -262,7 +262,11 @@ input[type="checkbox"] {
     display: none;
   }
 
-  .payment-type-container {
+  .total-container {
+    margin-block: 18px 1px;
+  }
+
+  .order- .payment-type-container {
     margin-top: 4px;
   }
 
@@ -830,6 +834,12 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 16px;
   margin-block: 2px 1px;
+}
+
+.order-total-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .order-item-wrapper {
@@ -1764,6 +1774,10 @@ p.tp-rating-value {
 
   .order-item-details {
     gap: 30px;
+  }
+
+  .order-total-group-container {
+    padding-bottom: 5px;
   }
 
   .shipping-address-fields,
