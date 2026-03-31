@@ -250,6 +250,10 @@ input[type="checkbox"] {
     margin-top: 14px;
   }
 
+  .billing-address-section .section-titles {
+    line-height: 30px;
+  }
+
   .order-summary {
     order: 1;
   }
@@ -776,11 +780,11 @@ input[type="checkbox"] {
 
 .order-summary-total {
   display: flex;
-  gap: 14px;
+  gap: 16px;
 }
 
 .order-summary-total .discounted-price {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .order-summary-total .original-price {
@@ -921,7 +925,7 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 20px 0;
+  padding: 21px 0;
   border-radius: 8px;
   border: 1px solid var(--color-border);
 }
@@ -961,7 +965,7 @@ input[type="checkbox"] {
 
 .payment-link-btn {
   display: flex;
-  width: 208px;
+  width: 196px;
   height: 40px;
   justify-content: center;
   align-items: center;
@@ -986,6 +990,8 @@ input[type="checkbox"] {
 
 .contact-info-section .section-titles {
   margin-bottom: 0;
+  line-height: 18px;
+  margin-bottom: 8px;
 }
 
 .contact-info-section .field input {
@@ -1034,8 +1040,7 @@ input[type="checkbox"] {
 }
 
 .shipping-address-section-title {
-  margin-top: 6px;
-  margin-bottom: 2px;
+  margin-top: 10px;
 }
 
 .shipping-address-fields {
@@ -1069,7 +1074,12 @@ input[type="checkbox"] {
 
 /* BILLING ADDRESS + SHIPPING METHOD STYLES SECTION ----------------------------------------------*/
 
-.billing-address-section,
+.billing-address-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .shipping-method-section {
   display: flex;
   flex-direction: column;
@@ -1102,7 +1112,7 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 8px;
   background-color: var(--color-grey);
-  padding: 22px 14px;
+  padding: 22px 14px 19px 14px;
   border-radius: 0 0 8px 8px;
 }
 
@@ -1757,6 +1767,7 @@ p.tp-rating-value {
 
   .shipping-address-section-title {
     margin-top: 0;
+    margin-bottom: 2px;
   }
 
   .payment-complete-order-btn-wrapper {
