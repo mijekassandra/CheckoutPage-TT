@@ -264,6 +264,10 @@ input[type="checkbox"] {
     min-height: 189px;
   }
 
+  .customer-review-section {
+    margin-inline: 17px;
+  }
+
   .payment-complete-order-btn-wrapper {
     padding: 3px 16px;
   }
